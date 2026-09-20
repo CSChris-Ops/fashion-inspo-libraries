@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="A personalized, interactive menswear inspiration library matching seasonal, old-money and casual styling formulas to Massimo Dutti and Zara references.">
+  <meta name="description" content="A personalized, interactive menswear inspiration library with separate seasonal, old-money and casual collections for Massimo Dutti and Zara.">
   <title>Fashion Inspo Libraries</title>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23171a18'/%3E%3Cpath d='M17 47V17h8l7 12 7-12h8v30h-7V29l-8 13-8-13v18z' fill='%23f4f0e8'/%3E%3C/svg%3E">
   <style>
@@ -37,6 +37,7 @@
     .look{border:1px solid rgba(255,255,255,.8);border-radius:24px;background:rgba(255,255,255,.63);box-shadow:0 12px 42px rgba(92,82,70,.09)}.look:hover{transform:translateY(-4px);box-shadow:0 22px 52px rgba(92,82,70,.14)}.visual{border-color:rgba(46,48,47,.1)}.look h2{font-weight:600!important;letter-spacing:-.04em!important}.items,.items li{border-color:rgba(46,48,47,.11)}.card-action{border-color:rgba(46,48,47,.16);border-radius:13px;background:rgba(255,255,255,.48);text-transform:none;letter-spacing:0}.card-action:hover,.card-action[aria-pressed="true"]{background:#303331}.advice{border:0!important;border-radius:16px;background:rgba(231,229,223,.72)}
     .saved-panel{border:1px solid rgba(255,255,255,.7);border-radius:26px;background:rgba(46,48,47,.86);box-shadow:var(--shadow);backdrop-filter:blur(24px)}.guide{border-top-color:rgba(46,48,47,.15)}.guide h2{font-weight:620;letter-spacing:-.045em}.rule{padding:18px;border:1px solid rgba(255,255,255,.76);border-radius:18px;background:var(--glass);box-shadow:0 8px 28px rgba(92,82,70,.07)}.foot{border-color:rgba(46,48,47,.12)}
     .model-dialog{border:1px solid rgba(255,255,255,.3);border-radius:28px;background:rgba(34,34,33,.88);box-shadow:0 35px 100px rgba(0,0,0,.38);backdrop-filter:blur(24px)}.model-dialog img,.dialog-caption{background:transparent}
+    .library[data-category="seasons"] .brand-switch{visibility:visible!important;display:flex!important}.brand-badge,.brand-tab{display:inline-flex;align-items:center;width:max-content;border:1px solid rgba(46,48,47,.12);border-radius:100px;background:rgba(255,255,255,.68);color:var(--ink);padding:5px 9px;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase}.brand-badge{margin-top:8px}.brand-tab{position:absolute;right:14px;top:14px;z-index:2;box-shadow:0 5px 16px rgba(50,48,45,.12)}.formula .brand-pair{grid-template-columns:1fr}.formula[data-brand-item="zara"]{background:linear-gradient(155deg,rgba(255,255,255,.72),rgba(237,231,228,.68))}.formula[data-brand-item="massimo"]{background:linear-gradient(155deg,rgba(255,255,255,.72),rgba(228,235,231,.68))}.look[data-brand-item="zara"]{background:linear-gradient(155deg,rgba(255,255,255,.76),rgba(239,233,231,.72))}.look[data-brand-item="massimo"]{background:linear-gradient(155deg,rgba(255,255,255,.76),rgba(230,236,232,.72))}
     .fit-dialog{width:min(92vw,610px);padding:0;border:1px solid rgba(255,255,255,.88);border-radius:30px;background:rgba(247,246,243,.82);color:var(--ink);box-shadow:0 35px 110px rgba(66,60,54,.28);backdrop-filter:blur(34px) saturate(1.3);-webkit-backdrop-filter:blur(34px) saturate(1.3)}.fit-dialog::backdrop{background:rgba(78,74,69,.28);backdrop-filter:blur(16px)}.fit-form{padding:34px}.fit-form .setup-mark{display:grid;place-items:center;width:46px;height:46px;border-radius:15px;background:linear-gradient(145deg,#dce7e0,#eadbd7);font-weight:700;box-shadow:inset 0 1px 1px rgba(255,255,255,.85),0 8px 24px rgba(90,80,70,.1)}.fit-form h2{margin:22px 0 8px;font-size:clamp(2rem,5vw,3.2rem);line-height:.98;letter-spacing:-.06em}.fit-form>p{margin:0;color:var(--muted);max-width:48ch}.measure-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:28px 0 12px}.measure-field{display:block;padding:14px 15px;border:1px solid rgba(46,48,47,.12);border-radius:18px;background:rgba(255,255,255,.66)}.measure-field span{display:block;margin-bottom:8px;color:var(--muted);font-size:.72rem;font-weight:650;text-transform:uppercase;letter-spacing:.08em}.measure-input{display:flex;align-items:baseline;gap:7px}.measure-input input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ink);font:600 1.8rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.measure-input em{font-style:normal;color:var(--muted)}.fit-privacy{font-size:.76rem!important}.fit-error{min-height:1.4em;margin:10px 0 0!important;color:#a34848!important;font-size:.8rem}.fit-submit{width:100%;margin-top:8px;padding:14px 18px;border:0;border-radius:16px;background:#2f3230;color:#fff;font:650 .93rem/1 inherit;cursor:pointer;box-shadow:0 12px 28px rgba(46,48,47,.2);transition:transform .2s ease,box-shadow .2s ease}.fit-submit:hover{transform:translateY(-1px);box-shadow:0 16px 32px rgba(46,48,47,.26)}
     @media(max-width:680px){.topbar{top:8px}.profile-action{padding:9px 10px}.intro{padding:48px 4px 36px}.intro h1{font-size:3.25rem}.library{padding:18px 12px;border-radius:25px}.library .controls{top:72px}.measure-grid{grid-template-columns:1fr}.fit-form{padding:26px 22px}.fit-dialog{border-radius:24px}.formula,.look{border-radius:20px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
@@ -66,7 +67,7 @@
     <section class="intro">
       <div><p class="eyebrow">A personal wardrobe prototype</p><h1>Your wardrobe, calibrated.</h1></div>
       <div>
-        <p class="dek">Pinterest-led old-money formulas matched to Massimo Dutti Armenia, with Zara alongside as a current reference for comparable shapes, colours and entry prices.</p>
+        <p class="dek">Pinterest-led outfit formulas organized as separate Massimo Dutti and Zara libraries, with seasonal, old-money and casual ways to explore.</p>
         <div class="fit-brief">
           <div><b id="fitTop">Personalized</b><span>top starting point</span></div><div><b id="fitTrouser">Personalized</b><span>trouser starting point</span></div><div><b id="fitHem">Personalized</b><span>length direction</span></div>
         </div>
@@ -86,10 +87,10 @@
             <button class="category-mode" type="button" data-category-mode="old-money" aria-pressed="false">Old Money</button>
             <button class="category-mode" type="button" data-category-mode="casual" aria-pressed="false">Casual</button>
           </div>
-          <div class="brand-switch" aria-label="Show brand references">
+          <div class="brand-switch" aria-label="Choose outfit brand">
             <button class="brand-mode" type="button" data-brand-mode="both" aria-pressed="true">Compare both</button>
             <button class="brand-mode" type="button" data-brand-mode="massimo" aria-pressed="false">Massimo Dutti</button>
-            <button class="brand-mode" type="button" data-brand-mode="zara" aria-pressed="false">Zara reference</button>
+            <button class="brand-mode" type="button" data-brand-mode="zara" aria-pressed="false">Zara</button>
           </div>
         </div>
       </div>
@@ -121,8 +122,8 @@
           <p class="formula-rule">Clean technical coat + small check shirt + pleated trouser + dark brown deck shoe.</p>
           <div class="tone-row" aria-label="Navy, stone, tobacco"><span class="tone" style="--tone:#243447"></span><span class="tone" style="--tone:#a69d8b"></span><span class="tone" style="--tone:#754b34"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Spring city set · 315,000 AMD</span><a href="#look-spring">View chosen look ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Technical outerwear, formal shirt and penny loafer · key pieces from 17,900 AMD</span><a href="https://www.zara.com/am/en/man-outerwear-coats-l719.html" target="_blank" rel="noreferrer">Browse coats ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Spring city set · 315,000 AMD</span><a href="#look-spring">View chosen look ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Technical outerwear, formal shirt and penny loafer · key pieces from 17,900 AMD</span><a href="https://www.zara.com/am/en/man-outerwear-coats-l719.html" target="_blank" rel="noreferrer">Browse coats ↗</a></div>
           </div>
         </article>
 
@@ -132,8 +133,8 @@
           <p class="formula-rule">Open linen shirt + tonal base + relaxed light trouser + soft leather loafer.</p>
           <div class="tone-row" aria-label="Sky blue, ecru, chocolate"><span class="tone" style="--tone:#a9c0cc"></span><span class="tone" style="--tone:#e8e0cf"></span><span class="tone" style="--tone:#4b3328"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Cool tonal linen set · 194,000 AMD</span><a href="#look-summer">View chosen look ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Linen shirt 23,900 + linen trouser 25,900 + penny loafer 23,900 AMD</span><a href="https://www.zara.com/am/en/man-linen-l708.html" target="_blank" rel="noreferrer">Browse linen ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Cool tonal linen set · 194,000 AMD</span><a href="#look-summer">View chosen look ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Linen shirt 23,900 + linen trouser 25,900 + penny loafer 23,900 AMD</span><a href="https://www.zara.com/am/en/man-linen-l708.html" target="_blank" rel="noreferrer">Browse linen ↗</a></div>
           </div>
         </article>
 
@@ -143,8 +144,8 @@
           <p class="formula-rule">Textured knit polo + high-rise tailored trouser + penny loafer; keep branding invisible.</p>
           <div class="tone-row" aria-label="Cream, navy, oxblood"><span class="tone" style="--tone:#e9dfc8"></span><span class="tone" style="--tone:#1d2c40"></span><span class="tone" style="--tone:#56312f"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Use the wide-leg trouser and leather boat shoe from the fall edit.</span><a href="#look-fall">View trouser line ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Textured knit polos from 19,900 AMD; leather penny loafers from 29,900 AMD</span><a href="https://www.zara.com/am/en/man-polos-knitwear-l1701.html" target="_blank" rel="noreferrer">Browse knit polos ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Use the wide-leg trouser and leather boat shoe from the fall edit.</span><a href="#look-fall">View trouser line ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Textured knit polos from 19,900 AMD; leather penny loafers from 29,900 AMD</span><a href="https://www.zara.com/am/en/man-polos-knitwear-l1701.html" target="_blank" rel="noreferrer">Browse knit polos ↗</a></div>
           </div>
         </article>
 
@@ -154,8 +155,8 @@
           <p class="formula-rule">Field-jacket attitude + utility shirt + pleated trouser, refined with one polished leather shoe.</p>
           <div class="tone-row" aria-label="Olive, sand, dark brown"><span class="tone" style="--tone:#59604c"></span><span class="tone" style="--tone:#b6a17e"></span><span class="tone" style="--tone:#3b2922"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Reversible parka + barrel-fit pleated trouser from the spring edit.</span><a href="#look-spring">View selected pieces ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Cropped cotton/linen jacket 47,900 AMD; linen trousers from 19,900 AMD</span><a href="https://www.zara.com/am/en/man-jackets-bombers-l645.html" target="_blank" rel="noreferrer">Browse jackets ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Reversible parka + barrel-fit pleated trouser from the spring edit.</span><a href="#look-spring">View selected pieces ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Cropped cotton/linen jacket 47,900 AMD; linen trousers from 19,900 AMD</span><a href="https://www.zara.com/am/en/man-jackets-bombers-l645.html" target="_blank" rel="noreferrer">Browse jackets ↗</a></div>
           </div>
         </article>
 
@@ -165,8 +166,8 @@
           <p class="formula-rule">Short brown bomber + blue shirt + charcoal trouser; the jacket ends at the belt line.</p>
           <div class="tone-row" aria-label="Tobacco, denim blue, charcoal"><span class="tone" style="--tone:#7c4d31"></span><span class="tone" style="--tone:#607b91"></span><span class="tone" style="--tone:#454342"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Wool bomber fall set · 295,000 AMD</span><a href="#look-fall">View chosen look ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Bomber jackets from 19,900 AMD; suede leather options 67,900 AMD</span><a href="https://www.zara.com/am/en/man-jackets-bombers-l645.html" target="_blank" rel="noreferrer">Browse bombers ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Wool bomber fall set · 295,000 AMD</span><a href="#look-fall">View chosen look ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Bomber jackets from 19,900 AMD; suede leather options 67,900 AMD</span><a href="https://www.zara.com/am/en/man-jackets-bombers-l645.html" target="_blank" rel="noreferrer">Browse bombers ↗</a></div>
           </div>
         </article>
 
@@ -176,8 +177,8 @@
           <p class="formula-rule">Controlled-volume navy outerwear + mock neck + dark trouser + leather Chelsea boot.</p>
           <div class="tone-row" aria-label="Midnight navy, charcoal, black"><span class="tone" style="--tone:#18273b"></span><span class="tone" style="--tone:#494b4d"></span><span class="tone" style="--tone:#161616"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo match</b><span>Warm monochrome set · 325,000 AMD</span><a href="#look-winter">View chosen look ↓</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Water-repellent down jacket from 29,900 AMD; leather Chelsea boots from 33,900 AMD</span><a href="https://www.zara.com/am/en/man-outerwear-padded-l722.html" target="_blank" rel="noreferrer">Browse outerwear ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Warm monochrome set · 325,000 AMD</span><a href="#look-winter">View chosen look ↓</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Water-repellent down jacket from 29,900 AMD; leather Chelsea boots from 33,900 AMD</span><a href="https://www.zara.com/am/en/man-outerwear-padded-l722.html" target="_blank" rel="noreferrer">Browse outerwear ↗</a></div>
           </div>
         </article>
 
@@ -187,8 +188,8 @@
           <p class="formula-rule">Navy fine-knit cardigan + blue Oxford shirt + stone pleated chinos + tassel loafers.</p>
           <div class="tone-row" aria-label="Navy, pale blue, stone, brown"><span class="tone" style="--tone:#1d2c40"></span><span class="tone" style="--tone:#b9cfdf"></span><span class="tone" style="--tone:#d3c8b3"></span><span class="tone" style="--tone:#51372b"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Cardigan, Oxford shirt, pleated chinos and tassel loafers · est. 220,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Comparable knit, shirt, tailored trouser and leather loafer · est. 98,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse menswear ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Cardigan, Oxford shirt, pleated chinos and tassel loafers · est. 220,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Comparable knit, shirt, tailored trouser and leather loafer · est. 98,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse menswear ↗</a></div>
           </div>
         </article>
 
@@ -198,8 +199,8 @@
           <p class="formula-rule">Unstructured taupe blazer + ivory knit polo + charcoal pleated trouser + penny loafer.</p>
           <div class="tone-row" aria-label="Taupe, ivory, charcoal, chocolate"><span class="tone" style="--tone:#a99a87"></span><span class="tone" style="--tone:#eee7d6"></span><span class="tone" style="--tone:#444445"></span><span class="tone" style="--tone:#493126"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Relaxed blazer, knit polo, darted trouser and penny loafer · est. 255,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Linen blazer, knit polo, pleated suit trouser and leather loafer · est. 146,000 AMD</span><a href="https://www.zara.com/am/en/man-suits-summer-l2513.html" target="_blank" rel="noreferrer">Browse soft suits ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Relaxed blazer, knit polo, darted trouser and penny loafer · est. 255,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Linen blazer, knit polo, pleated suit trouser and leather loafer · est. 146,000 AMD</span><a href="https://www.zara.com/am/en/man-suits-summer-l2513.html" target="_blank" rel="noreferrer">Browse soft suits ↗</a></div>
           </div>
         </article>
 
@@ -209,8 +210,8 @@
           <p class="formula-rule">Navy textured knit polo + ecru linen pleated trouser + woven brown leather loafer.</p>
           <div class="tone-row" aria-label="Navy, ecru, brown"><span class="tone" style="--tone:#182944"></span><span class="tone" style="--tone:#eee6d4"></span><span class="tone" style="--tone:#593d2d"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Linen-knit polo, linen trouser and woven loafer · est. 175,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Knit polo 25,900 + linen trouser 25,900 + casual leather loafer 33,900 AMD</span><a href="https://www.zara.com/am/en/man-linen-l708.html" target="_blank" rel="noreferrer">Browse linen ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Linen-knit polo, linen trouser and woven loafer · est. 175,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Knit polo 25,900 + linen trouser 25,900 + casual leather loafer 33,900 AMD</span><a href="https://www.zara.com/am/en/man-linen-l708.html" target="_blank" rel="noreferrer">Browse linen ↗</a></div>
           </div>
         </article>
 
@@ -220,8 +221,8 @@
           <p class="formula-rule">Cream cable-knit vest + blue Oxford shirt + tailored navy Bermuda + clean court sneaker.</p>
           <div class="tone-row" aria-label="Cream, pale blue, navy, white"><span class="tone" style="--tone:#eee5cf"></span><span class="tone" style="--tone:#b9cedf"></span><span class="tone" style="--tone:#1e2e46"></span><span class="tone" style="--tone:#f8f7f1"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Knit vest, Oxford shirt, tailored Bermuda and leather trainer · est. 159,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Comparable knit, shirt, pleated Bermuda and leather trainer · est. 92,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse casual pieces ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Knit vest, Oxford shirt, tailored Bermuda and leather trainer · est. 159,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Comparable knit, shirt, pleated Bermuda and leather trainer · est. 92,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse casual pieces ↗</a></div>
           </div>
         </article>
 
@@ -231,8 +232,8 @@
           <p class="formula-rule">Short tobacco suede blouson + white tee + charcoal double-pleat trouser + black loafer.</p>
           <div class="tone-row" aria-label="Tobacco, white, charcoal, black"><span class="tone" style="--tone:#744a31"></span><span class="tone" style="--tone:#f6f4ee"></span><span class="tone" style="--tone:#3f4042"></span><span class="tone" style="--tone:#151515"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Suede blouson, cotton tee, darted trouser and leather loafer · est. 339,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Suede-look bomber, basic tee, pleated trouser and leather loafer · est. 143,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse menswear ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Suede blouson, cotton tee, darted trouser and leather loafer · est. 339,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Suede-look bomber, basic tee, pleated trouser and leather loafer · est. 143,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse menswear ↗</a></div>
           </div>
         </article>
 
@@ -242,8 +243,8 @@
           <p class="formula-rule">Camel wool coat + cream cable mock neck + dark brown trouser + brown Chelsea boot.</p>
           <div class="tone-row" aria-label="Camel, cream, dark brown"><span class="tone" style="--tone:#b88959"></span><span class="tone" style="--tone:#eee7d7"></span><span class="tone" style="--tone:#443229"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Wool coat, cable knit, tailored trouser and leather Chelsea boot · est. 385,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Coat, knit, wool trouser and leather Chelsea boot · est. 128,000 AMD</span><a href="https://www.zara.com/am/en/man-shoes-chelsea-boots-l4639.html" target="_blank" rel="noreferrer">Browse winter footwear ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Wool coat, cable knit, tailored trouser and leather Chelsea boot · est. 385,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Coat, knit, wool trouser and leather Chelsea boot · est. 128,000 AMD</span><a href="https://www.zara.com/am/en/man-shoes-chelsea-boots-l4639.html" target="_blank" rel="noreferrer">Browse winter footwear ↗</a></div>
           </div>
         </article>
 
@@ -253,8 +254,8 @@
           <p class="formula-rule">Tailored navy overcoat + ivory roll neck + charcoal trouser + black Chelsea boot.</p>
           <div class="tone-row" aria-label="Navy, ivory, charcoal, black"><span class="tone" style="--tone:#19263a"></span><span class="tone" style="--tone:#eee9dc"></span><span class="tone" style="--tone:#444548"></span><span class="tone" style="--tone:#121212"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Tailored coat, wool roll neck, darted trouser and Chelsea boot · est. 385,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Coat, knit, wool trouser and leather Chelsea boot · est. 130,000 AMD</span><a href="https://www.zara.com/am/en/man-trousers-wool-l16628.html" target="_blank" rel="noreferrer">Browse wool trousers ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Tailored coat, wool roll neck, darted trouser and Chelsea boot · est. 385,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Coat, knit, wool trouser and leather Chelsea boot · est. 130,000 AMD</span><a href="https://www.zara.com/am/en/man-trousers-wool-l16628.html" target="_blank" rel="noreferrer">Browse wool trousers ↗</a></div>
           </div>
         </article>
 
@@ -264,13 +265,13 @@
           <p class="formula-rule">Olive quilted field jacket + cream roll neck + sand chino + dark brown derby.</p>
           <div class="tone-row" aria-label="Olive, cream, sand, brown"><span class="tone" style="--tone:#555744"></span><span class="tone" style="--tone:#eee7d7"></span><span class="tone" style="--tone:#c1aa84"></span><span class="tone" style="--tone:#3f2d25"></span></div>
           <div class="brand-pair">
-            <div class="brand-block" data-brand="massimo"><b>Massimo basket</b><span>Quilted jacket, roll neck, tailored chino and leather derby · est. 305,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
-            <div class="brand-block" data-brand="zara"><b>Zara reference</b><span>Quilted jacket, basic knit, chino and leather shoe · est. 96,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse casual pieces ↗</a></div>
+            <div class="brand-block" data-brand="massimo"><b>Massimo Dutti</b><span>Quilted jacket, roll neck, tailored chino and leather derby · est. 305,000 AMD</span><a href="https://www.massimodutti.com/am/en/men-n1343" target="_blank" rel="noreferrer">Shop the wardrobe ↗</a></div>
+            <div class="brand-block" data-brand="zara"><b>Zara</b><span>Quilted jacket, basic knit, chino and leather shoe · est. 96,000 AMD</span><a href="https://www.zara.com/am/en/man-l534.html" target="_blank" rel="noreferrer">Browse casual pieces ↗</a></div>
           </div>
         </article>
         <p class="formula-empty" id="formulaEmpty" hidden>No library look matches this category and season yet. Try another season.</p>
       </div>
-      <p class="library-note"><span>Fourteen formulas screened from recurring Pinterest styling cues; Zara prices and basket estimates checked 20 Sep 2026 and may move with stock or sales.</span><a href="https://www.pinterest.com/search/pins/?q=mans%20outfit%20old%20money%20for%20all%20seasons&rs=typed" target="_blank" rel="noreferrer">Open the Pinterest inspiration ↗</a></p>
+      <p class="library-note"><span>Fourteen styling formulas per brand, screened from recurring Pinterest cues; Zara prices and basket estimates checked 20 Sep 2026 and may move with stock or sales.</span><a href="https://www.pinterest.com/search/pins/?q=mans%20outfit%20old%20money%20for%20all%20seasons&rs=typed" target="_blank" rel="noreferrer">Open the Pinterest inspiration ↗</a></p>
       <div class="looks-view">
       <section class="grid" aria-live="polite">
       <p class="empty-state" id="emptyState" hidden>No look fits both filters. Try a higher budget or another season.</p>
@@ -410,6 +411,54 @@
     document.querySelector('#fitSettings').addEventListener('click',openFitSettings);
     if(!applyFitProfile(getFitProfile()||{}))setTimeout(openFitSettings,80);
 
+    const brandLabels={both:'Massimo Dutti + Zara',massimo:'Massimo Dutti',zara:'Zara'};
+    const zaraSeasonal={
+      spring:{title:'Polished spring utility',occasion:'Workday · city walk · dinner',full:117600,lite:69700,items:[
+        ['Cropped cotton-linen jacket',47900,'https://www.zara.com/am/en/man-jackets-bombers-l645.html','Keep the hem near the belt line for cleaner proportions.',true],
+        ['Structured poplin shirt',19900,'https://www.zara.com/am/en/man-l534.html','Choose pale blue, white or a restrained stripe.'],
+        ['Pleated linen trousers',19900,'https://www.zara.com/am/en/man-linen-l708.html','Alter to a minimal break over the shoe.'],
+        ['Leather penny loafers',29900,'https://www.zara.com/am/en/man-l534.html','Dark brown keeps the palette soft and polished.']],advice:'Remove the jacket on warmer days and keep the shirt tucked. The lighter set is <strong>69,700 AMD</strong>.'},
+      summer:{title:'Riviera linen by Zara',occasion:'Holiday · terrace · casual Friday',full:82600,lite:73700,items:[
+        ['Basic mercerised T-shirt',8900,'https://www.zara.com/am/en/man-l534.html','Use white or ecru as the quiet base.',true],
+        ['Linen shirt',23900,'https://www.zara.com/am/en/man-linen-l708.html','Wear open, then button it when the T-shirt comes off.'],
+        ['Linen trousers',25900,'https://www.zara.com/am/en/man-linen-l708.html','Choose ecru, stone or pale taupe.'],
+        ['Leather loafers',23900,'https://www.zara.com/am/en/man-l534.html','Use invisible socks and avoid a heavy sole.']],advice:'Keep all visible cloth within one light tonal family. In peak heat, remove the T-shirt for a <strong>73,700 AMD</strong> set.'},
+      fall:{title:'Suede-toned city layers',occasion:'Office · drinks · gallery',full:143600,lite:75700,items:[
+        ['Suede leather bomber',67900,'https://www.zara.com/am/en/man-jackets-bombers-l645.html','A short tobacco jacket gives the look structure.',true],
+        ['Regular-fit denim shirt',19900,'https://www.zara.com/am/en/man-l534.html','Use a clean medium blue without distressing.'],
+        ['Pleated tailored trousers',25900,'https://www.zara.com/am/en/man-l534.html','Charcoal balances the warmer outer layer.'],
+        ['Leather penny loafers',29900,'https://www.zara.com/am/en/man-l534.html','Black or deep brown both work.']],advice:'Let the bomber end at the belt line. Without it, the three-piece fall base is <strong>75,700 AMD</strong>.'},
+      winter:{title:'Clean winter monochrome',occasion:'Daily commute · evening · travel',full:119600,lite:119600,items:[
+        ['Water-repellent down jacket',29900,'https://www.zara.com/am/en/man-outerwear-padded-l722.html','Navy or black keeps the volume controlled.'],
+        ['Wool-blend mock-neck knit',19900,'https://www.zara.com/am/en/man-l534.html','A fine gauge layer avoids bulk under the jacket.'],
+        ['Wool-blend trousers',35900,'https://www.zara.com/am/en/man-trousers-wool-l16628.html','Choose charcoal with a clean break.'],
+        ['Leather Chelsea boots',33900,'https://www.zara.com/am/en/man-shoes-chelsea-boots-l4639.html','A modest sole visually anchors the outerwear.']],advice:'Keep the visible palette to navy, charcoal and black. All four winter layers are recommended in cold weather.'}
+    };
+    const seasonalGrid=document.querySelector('.looks-view .grid');
+    [...seasonalGrid.querySelectorAll('.look')].forEach(card=>{
+      const season=card.dataset.season;card.dataset.brandItem='massimo';
+      const massimoBadge=document.createElement('span');massimoBadge.className='brand-tab';massimoBadge.textContent='Massimo Dutti';card.querySelector('.visual').append(massimoBadge);
+      const data=zaraSeasonal[season],clone=card.cloneNode(true);clone.id=`look-zara-${season}`;clone.dataset.brandItem='zara';clone.dataset.title=data.title;clone.dataset.fullPrice=String(data.full);clone.dataset.litePrice=String(data.lite);
+      clone.querySelector('h2').textContent=data.title;clone.querySelector('.occasion').textContent=data.occasion;
+      clone.querySelector('.items').innerHTML=data.items.map(([name,price,url,note,optional])=>`<li${optional?' data-layer="optional"':''}><a href="${url}" target="_blank" rel="noreferrer">${name}<span class="item-note">${note}</span></a><span class="price">${Number(price).toLocaleString('en-US')} AMD</span></li>`).join('');
+      clone.querySelector('.total b').textContent=`${data.full.toLocaleString('en-US')} AMD`;clone.querySelector('.advice p').innerHTML=data.advice;
+      clone.querySelector('.visual').setAttribute('aria-label',`Open full-body Zara ${season} model`);clone.querySelector('.visual img').alt=`Full-body AI model visualizing the Zara ${season} outfit`;
+      clone.querySelector('.brand-tab').textContent='Zara';
+      const lite=clone.querySelector('.toggle-lite');lite.classList.remove('is-lite');lite.setAttribute('aria-pressed','false');lite.disabled=season==='winter';lite.textContent=season==='winter'?'Winter-ready':'Lighter version';
+      seasonalGrid.append(clone);
+    });
+
+    const formulaGrid=document.querySelector('.formula-grid'),formulaEmptyNode=document.querySelector('#formulaEmpty');
+    [...formulaGrid.querySelectorAll('.formula')].forEach(source=>{
+      ['massimo','zara'].forEach(brand=>{
+        const clone=source.cloneNode(true);clone.dataset.brandItem=brand;clone.dataset.title=`${source.dataset.title} · ${brandLabels[brand]}`;
+        clone.querySelectorAll('.brand-block').forEach(block=>{if(block.dataset.brand!==brand)block.remove()});
+        const badge=document.createElement('span');badge.className='brand-badge';badge.textContent=brandLabels[brand];clone.querySelector('.formula-top').append(badge);
+        formulaGrid.insertBefore(clone,formulaEmptyNode);
+      });
+      source.remove();
+    });
+
     const cards=[...document.querySelectorAll('.look')];
     const seasonFilters=[...document.querySelectorAll('.season-filter')];
     const budgetFilters=[...document.querySelectorAll('.budget-filter')];
@@ -420,26 +469,29 @@
     const library=document.querySelector('#styleLibrary');
     const libraryTitle=document.querySelector('#libraryTitle');
     const libraryIntro=document.querySelector('#libraryIntro');
-    let activeSeason='all',activeBudget=999999,activeCategory='seasons';
+    let activeSeason='all',activeBudget=999999,activeCategory='seasons',activeBrand='both';
     const money=value=>`${Number(value).toLocaleString('en-US')} AMD`;
     const withTransition=change=>document.startViewTransition?document.startViewTransition(change):change();
     const applyFilters=()=>{
       let visible=0,formulaVisible=0;
       cards.forEach(card=>{
         const price=Number(card.dataset.currentPrice||card.dataset.fullPrice);
-        card.hidden=activeCategory!=='seasons'||!((activeSeason==='all'||card.dataset.season===activeSeason)&&price<=activeBudget);
+        const brandMatch=activeBrand==='both'||card.dataset.brandItem===activeBrand;
+        card.hidden=activeCategory!=='seasons'||!((activeSeason==='all'||card.dataset.season===activeSeason)&&price<=activeBudget&&brandMatch);
         if(!card.hidden)visible++;
       });
       formulas.forEach(formula=>{
         const categoryMatch=activeCategory!=='seasons'&&formula.dataset.categories.split(' ').includes(activeCategory);
         const seasonMatch=activeSeason==='all'||formula.dataset.seasons.split(' ').includes(activeSeason);
-        formula.hidden=!(categoryMatch&&seasonMatch);
+        const brandMatch=activeBrand==='both'||formula.dataset.brandItem===activeBrand;
+        formula.hidden=!(categoryMatch&&seasonMatch&&brandMatch);
         if(!formula.hidden)formulaVisible++;
       });
       emptyState.hidden=activeCategory!=='seasons'||visible!==0;
       formulaEmpty.hidden=activeCategory==='seasons'||formulaVisible!==0;
       const count=activeCategory==='seasons'?visible:formulaVisible;
-      resultsNote.textContent=`Showing ${count} ${count===1?'look':'looks'} · ${activeSeason==='all'?'all seasons':activeSeason}`;
+      const categoryLabel=activeCategory==='seasons'?'Seasons':activeCategory==='old-money'?'Old Money':'Casual';
+      resultsNote.textContent=`Showing ${count} ${count===1?'look':'looks'} · ${categoryLabel} · ${brandLabels[activeBrand]} · ${activeSeason==='all'?'all seasons':activeSeason}`;
     };
     seasonFilters.forEach(button=>button.addEventListener('click',()=>{
       withTransition(()=>{seasonFilters.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));activeSeason=button.dataset.filter;applyFilters();});
@@ -449,17 +501,22 @@
     }));
 
     const categoryCopy={
-      seasons:['Seasonal wardrobe','Four complete seasonal outfits with exact pieces, total budgets, fit guidance and head-to-toe model views.'],
-      'old-money':['Old-money library','Fourteen screened Pinterest formulas matched across Massimo Dutti and Zara, each shown on a full-body AI model.'],
-      casual:['Casual library','Nine relaxed formulas that keep the same quiet-luxury palette, clean proportions and polished footwear.']
+      seasons:['Seasonal wardrobe','Complete spring, summer, fall and winter outfits with brand-specific pieces, budgets, fit guidance and full-body model views.'],
+      'old-money':['Old-money library','Screened Pinterest formulas rebuilt as separate Massimo Dutti and Zara collections, each shown on a full-body AI model.'],
+      casual:['Casual library','Relaxed brand-specific formulas with quiet-luxury colours, clean proportions and polished footwear.']
+    };
+    const refreshLibraryCopy=()=>{
+      const [title,intro]=categoryCopy[activeCategory];
+      libraryTitle.textContent=activeBrand==='both'?title:`${title} · ${brandLabels[activeBrand]}`;
+      libraryIntro.textContent=activeBrand==='both'?`${intro} Compare both complete lists or choose one brand.`:`${intro} Showing the complete ${brandLabels[activeBrand]} list.`;
     };
     document.querySelectorAll('.category-mode').forEach(button=>button.addEventListener('click',()=>withTransition(()=>{
       document.querySelectorAll('.category-mode').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
       activeCategory=button.dataset.categoryMode;library.dataset.category=activeCategory;
-      [libraryTitle.textContent,libraryIntro.textContent]=categoryCopy[activeCategory];applyFilters();
+      refreshLibraryCopy();applyFilters();
     })));
     document.querySelectorAll('.brand-mode').forEach(button=>button.addEventListener('click',()=>{
-      withTransition(()=>{document.querySelectorAll('.brand-mode').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));library.dataset.brand=button.dataset.brandMode;});
+      withTransition(()=>{document.querySelectorAll('.brand-mode').forEach(b=>b.setAttribute('aria-pressed',String(b===button)));activeBrand=button.dataset.brandMode;library.dataset.brand=activeBrand;refreshLibraryCopy();applyFilters();});
     }));
 
     cards.forEach(card=>{
@@ -473,14 +530,14 @@
       });
     });
 
-    const saved=new Set(JSON.parse(localStorage.getItem('seasonal-wardrobe-saved')||'[]'));
+    const saved=new Set(JSON.parse(localStorage.getItem('seasonal-wardrobe-saved')||'[]').map(key=>key.includes(':')?key:`massimo:${key}`));
     const savedCount=document.querySelector('#savedCount'),savedPanel=document.querySelector('#savedPanel'),savedList=document.querySelector('#savedList'),savedTotal=document.querySelector('#savedTotal');
     function updateSaved(){
       savedCount.textContent=saved.size;savedPanel.hidden=saved.size===0;savedList.innerHTML='';let total=0;
-      cards.forEach(card=>{const button=card.querySelector('.save-look'),isSaved=saved.has(card.dataset.season);button.setAttribute('aria-pressed',String(isSaved));button.textContent=isSaved?'Saved ✓':'Save look';if(isSaved){total+=Number(card.dataset.currentPrice);const chip=document.createElement('span');chip.className='saved-chip';chip.textContent=`${card.dataset.title} · ${money(card.dataset.currentPrice)}`;savedList.append(chip);}});
+      cards.forEach(card=>{const button=card.querySelector('.save-look'),key=`${card.dataset.brandItem}:${card.dataset.season}`,isSaved=saved.has(key);button.setAttribute('aria-pressed',String(isSaved));button.textContent=isSaved?'Saved ✓':'Save look';if(isSaved){total+=Number(card.dataset.currentPrice);const chip=document.createElement('span');chip.className='saved-chip';chip.textContent=`${brandLabels[card.dataset.brandItem]} · ${card.dataset.title} · ${money(card.dataset.currentPrice)}`;savedList.append(chip);}});
       savedTotal.textContent=money(total);localStorage.setItem('seasonal-wardrobe-saved',JSON.stringify([...saved]));
     }
-    document.querySelectorAll('.save-look').forEach(button=>button.addEventListener('click',()=>{const season=button.closest('.look').dataset.season;saved.has(season)?saved.delete(season):saved.add(season);updateSaved();}));
+    document.querySelectorAll('.save-look').forEach(button=>button.addEventListener('click',()=>{const card=button.closest('.look'),key=`${card.dataset.brandItem}:${card.dataset.season}`;saved.has(key)?saved.delete(key):saved.add(key);updateSaved();}));
     document.querySelector('#savedTrigger').addEventListener('click',()=>{if(saved.size)savedPanel.scrollIntoView({behavior:'smooth',block:'center'});});
     updateSaved();
 
@@ -490,11 +547,11 @@
     dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
     document.querySelectorAll('a[href^="#look-"]').forEach(link=>link.addEventListener('click',event=>{
       event.preventDefault();const target=document.querySelector(link.getAttribute('href'));if(!target)return;
-      activeCategory='seasons';activeSeason=target.dataset.season;
-      withTransition(()=>{library.dataset.category='seasons';document.querySelectorAll('.category-mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.categoryMode==='seasons')));seasonFilters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===activeSeason)));[libraryTitle.textContent,libraryIntro.textContent]=categoryCopy.seasons;applyFilters();});
+      activeCategory='seasons';activeSeason=target.dataset.season;activeBrand=target.dataset.brandItem;
+      withTransition(()=>{library.dataset.category='seasons';library.dataset.brand=activeBrand;document.querySelectorAll('.category-mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.categoryMode==='seasons')));document.querySelectorAll('.brand-mode').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.brandMode===activeBrand)));seasonFilters.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===activeSeason)));refreshLibraryCopy();applyFilters();});
       setTimeout(()=>target.scrollIntoView({behavior:'smooth',block:'start'}),240);
     }));
-    applyFilters();
+    refreshLibraryCopy();applyFilters();
   </script>
 </body>
 </html>

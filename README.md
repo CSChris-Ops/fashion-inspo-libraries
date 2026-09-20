@@ -10,6 +10,8 @@ This repository intentionally contains only the static public experience:
 - No private APIs, deployment credentials, project metadata, or environment secrets
 - First-visit height and weight settings personalize general size and proportion guidance
 - Guest fit settings and saved looks remain in the visitor's browser using local storage
+- Category and brand controls work as one combined filter across Seasons, Old Money, and Casual
+- Massimo Dutti and Zara each have their own complete seasonal and formula-card collections
 - Shopping actions open external retailer or search pages; this project does not sell products
 - Prices and availability are styling references and may change
 - Model images are AI-generated editorial visualizations
