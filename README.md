@@ -11,7 +11,9 @@ This repository intentionally contains only the static public experience:
 - First-visit height and weight settings personalize general size and proportion guidance
 - Guest fit settings and saved looks remain in the visitor's browser using local storage
 - Category and brand controls work as one combined filter across Seasons, Old Money, and Casual
-- Massimo Dutti and Zara each have their own complete seasonal and formula-card collections
+- Massimo Dutti and Zara each have 18 independently authored formula cards with brand-only product baskets
+- Every formula has its own generated full-body model image; Zara also has four separate seasonal model images
+- The supplied Massimo Dutti and Zara wordmarks are used in the brand controls with shadow-free styling
 - Shopping actions open external retailer or search pages; this project does not sell products
 - Prices and availability are styling references and may change
 - Model images are AI-generated editorial visualizations
