@@ -1,0 +1,887 @@
+{
+  "schema_version": 2,
+  "id": "hm",
+  "label": "H&M",
+  "order": 3,
+  "market": "US",
+  "currency": "USD",
+  "home_url": "https://www2.hm.com/en_us/men.html",
+  "logo": {
+    "src": "assets/hm-logo-clean.png",
+    "class": "hm-logo"
+  },
+  "tones": [
+    "#eee5d8",
+    "#9a6b4b",
+    "#3f4c3e"
+  ],
+  "try_on_model": "tryon-hm.png",
+  "updated_at": "2026-09-21T00:00:00+04:00",
+  "seasonal": [
+    {
+      "id": "hm-spring",
+      "season": "spring",
+      "title": "Scandinavian spring utility",
+      "image": "assets/hm-season-spring.jpg",
+      "range": "8–18°C",
+      "occasion": "Workday · coffee · city walk",
+      "currency": "USD",
+      "full": 159.96,
+      "lite": 109.97,
+      "items": [
+        {
+          "name": "Relaxed twill overshirt",
+          "price": 49.99,
+          "url": "https://www2.hm.com/en_us/men/products/jackets-and-coats.html",
+          "note": "Sage adds colour without breaking the neutral palette.",
+          "optional": true
+        },
+        {
+          "name": "Premium cotton T-shirt",
+          "price": 19.99,
+          "url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+          "note": "Use optic white to keep the face bright.",
+          "optional": false
+        },
+        {
+          "name": "Loose-fit tailored pants",
+          "price": 49.99,
+          "url": "https://www2.hm.com/en_us/men/products/pants.html",
+          "note": "A single break keeps the relaxed leg intentional.",
+          "optional": false
+        },
+        {
+          "name": "Minimal sneakers",
+          "price": 39.99,
+          "url": "https://www2.hm.com/en_us/men/products/shoes.html",
+          "note": "Choose white leather or clean off-white canvas.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "The cropped outer layer meets the higher trouser rise and lengthens the leg line. Remove it for a <strong>$109.97</strong> warm-day basket."
+    },
+    {
+      "id": "hm-summer",
+      "season": "summer",
+      "title": "H&M linen resort column",
+      "image": "assets/hm-season-summer.jpg",
+      "range": "24–35°C",
+      "occasion": "Holiday · terrace · casual Friday",
+      "currency": "USD",
+      "full": 122.96,
+      "lite": 109.97,
+      "items": [
+        {
+          "name": "Ribbed cotton T-shirt",
+          "price": 12.99,
+          "url": "https://www2.hm.com/en_us/men/products/t-shirts-and-tanks.html",
+          "note": "Keep the inner layer white or cream.",
+          "optional": true
+        },
+        {
+          "name": "Relaxed-fit linen-blend resort shirt",
+          "price": 29.99,
+          "url": "https://www2.hm.com/en_us/men/shop-by-product/linen-clothing.html",
+          "note": "Wear open, then button it for dinner.",
+          "optional": false
+        },
+        {
+          "name": "Regular-fit linen-blend pants",
+          "price": 39.99,
+          "url": "https://www2.hm.com/en_us/men/shop-by-product/linen-clothing.html",
+          "note": "Stone and sand work with every warm neutral.",
+          "optional": false
+        },
+        {
+          "name": "Leather sandals",
+          "price": 39.99,
+          "url": "https://www2.hm.com/en_us/men/products/shoes.html",
+          "note": "A slim dark-brown strap gives definition.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Keep shirt and trouser within one tonal family. In peak heat, drop the T-shirt for a <strong>$109.97</strong> set."
+    },
+    {
+      "id": "hm-fall",
+      "season": "fall",
+      "title": "Tobacco city layers",
+      "image": "assets/hm-season-fall.jpg",
+      "range": "8–20°C",
+      "occasion": "Office · drinks · gallery",
+      "currency": "USD",
+      "full": 199.96,
+      "lite": 129.97,
+      "items": [
+        {
+          "name": "Suede-look bomber jacket",
+          "price": 69.99,
+          "url": "https://www2.hm.com/en_us/men/products/jackets-and-coats.html",
+          "note": "The cropped tobacco layer defines the waist.",
+          "optional": true
+        },
+        {
+          "name": "Fine-knit polo shirt",
+          "price": 29.99,
+          "url": "https://www2.hm.com/en_us/men/products/polos.html",
+          "note": "Cream softens the warm outer layer.",
+          "optional": false
+        },
+        {
+          "name": "Loose-fit tailored pants",
+          "price": 49.99,
+          "url": "https://www2.hm.com/en_us/men/products/pants.html",
+          "note": "Charcoal keeps the lower half quiet.",
+          "optional": false
+        },
+        {
+          "name": "Leather loafers",
+          "price": 49.99,
+          "url": "https://www2.hm.com/en_us/men/products/shoes/loafers.html",
+          "note": "Use dark brown with invisible socks.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Let the bomber finish close to the waistband. Without it, the polished three-piece base is <strong>$129.97</strong>."
+    },
+    {
+      "id": "hm-winter",
+      "season": "winter",
+      "title": "Camel winter structure",
+      "image": "assets/hm-season-winter.jpg",
+      "range": "−5–8°C",
+      "occasion": "Commute · dinner · weekend",
+      "currency": "USD",
+      "full": 258.97,
+      "lite": 258.97,
+      "items": [
+        {
+          "name": "Wool-blend coat",
+          "price": 99,
+          "url": "https://www2.hm.com/en_us/men/products/jackets-and-coats/coats.html",
+          "note": "Camel is the single warm statement.",
+          "optional": false
+        },
+        {
+          "name": "Fine-knit turtleneck",
+          "price": 39.99,
+          "url": "https://www2.hm.com/en_us/men/products/sweaters-and-cardigans.html",
+          "note": "Oatmeal keeps the layer light around the face.",
+          "optional": false
+        },
+        {
+          "name": "Regular-fit suit pants",
+          "price": 49.99,
+          "url": "https://www2.hm.com/en_us/men/products/suits-blazers.html",
+          "note": "Charcoal controls the volume above.",
+          "optional": false
+        },
+        {
+          "name": "Chelsea boots",
+          "price": 69.99,
+          "url": "https://www2.hm.com/en_us/men/products/shoes/boots.html",
+          "note": "Black leather anchors the long coat.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Keep the coat below the knee only if the trouser break is clean. All four pieces stay in the cold-weather version."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "hm-premium-soft-blazer",
+      "title": "Premium soft blazer",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-premium-blazer.jpg",
+      "rule": "Keep the blazer relaxed, the polo fine-gauge and the trouser rise slightly higher.",
+      "pieces": [
+        "regular-fit single-breasted jacket",
+        "fine-knit polo shirt",
+        "loose-fit tailored pants",
+        "leather loafers"
+      ],
+      "basket": {
+        "amount": 209.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-linen-resort-neutrals",
+      "title": "Linen resort neutrals",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-linen-resort.jpg",
+      "rule": "Layer pale blue over ecru and use one narrow dark accessory for definition.",
+      "pieces": [
+        "linen-blend resort shirt",
+        "regular-fit linen-blend pants",
+        "leather belt",
+        "sandals"
+      ],
+      "basket": {
+        "amount": 127.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-twill-overshirt-weekend",
+      "title": "Twill overshirt weekend",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-twill-overshirt.jpg",
+      "rule": "Use a fitted tee beneath the relaxed overshirt so the shape stays intentional.",
+      "pieces": [
+        "relaxed twill overshirt",
+        "premium cotton T-shirt",
+        "regular-fit chinos",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 149.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-navy-double-breasted-line",
+      "title": "Navy double-breasted line",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-double-breasted.jpg",
+      "rule": "Let the jacket carry the volume and keep the shirt and trouser clean and narrow.",
+      "pieces": [
+        "relaxed double-breasted jacket",
+        "Oxford shirt",
+        "regular-fit suit pants",
+        "leather derby shoes"
+      ],
+      "basket": {
+        "amount": 248.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-textured-knit-polo",
+      "title": "Textured knit polo",
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-knit-polo.jpg",
+      "rule": "A tonal cream polo and taupe trouser make texture the main contrast.",
+      "pieces": [
+        "fine-knit polo shirt",
+        "regular-fit linen-blend pants",
+        "leather belt",
+        "penny loafers"
+      ],
+      "basket": {
+        "amount": 137.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-tobacco-bomber-pleats",
+      "title": "Tobacco bomber + pleats",
+      "seasons": [
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-suede-bomber.jpg",
+      "rule": "The short warm jacket should meet a charcoal pleat at the natural waist.",
+      "pieces": [
+        "suede-look bomber",
+        "fine-knit sweater",
+        "loose-fit tailored pants",
+        "leather loafers"
+      ],
+      "basket": {
+        "amount": 199.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-cable-cardigan-campus",
+      "title": "Cable cardigan campus",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-cable-cardigan.jpg",
+      "rule": "Button the cardigan through the middle and let the pale collar frame the face.",
+      "pieces": [
+        "cable-knit cardigan",
+        "Oxford shirt",
+        "regular-fit chinos",
+        "leather moccasins"
+      ],
+      "basket": {
+        "amount": 159.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-taupe-trench-commute",
+      "title": "Taupe trench commute",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-trench-merino.jpg",
+      "rule": "A clean black trouser keeps the flowing trench from overwhelming a 175 cm frame.",
+      "pieces": [
+        "trench coat",
+        "fine-knit merino sweater",
+        "tailored pants",
+        "derby shoes"
+      ],
+      "basket": {
+        "amount": 249.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-burgundy-winter-column",
+      "title": "Burgundy winter column",
+      "seasons": [
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-wool-overcoat.jpg",
+      "rule": "Burgundy is the single colour note between charcoal coat, grey wool and black leather.",
+      "pieces": [
+        "wool-blend coat",
+        "fine-knit turtleneck",
+        "flannel pants",
+        "Chelsea boots"
+      ],
+      "basket": {
+        "amount": 288.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-quilted-cord-country",
+      "title": "Quilted cord country",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-quilted-cord.jpg",
+      "rule": "Keep the quilt slim and use matte corduroy rather than another technical fabric.",
+      "pieces": [
+        "quilted jacket",
+        "lambswool half-zip",
+        "corduroy pants",
+        "country boots"
+      ],
+      "basket": {
+        "amount": 209.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-clean-double-denim",
+      "title": "Clean double denim",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-denim-straight.jpg",
+      "rule": "Separate the two denim washes clearly and keep the white tee visible.",
+      "pieces": [
+        "denim overshirt",
+        "heavyweight T-shirt",
+        "straight-leg jeans",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 139.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-harrington-olive-chino",
+      "title": "Harrington + olive chino",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-harrington-chino.jpg",
+      "rule": "A hip-length sand jacket and straight olive chino create a balanced casual line.",
+      "pieces": [
+        "Harrington jacket",
+        "pique polo shirt",
+        "regular-fit chinos",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 164.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-pique-summer-club",
+      "title": "Pique summer club",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-pique-shorts.jpg",
+      "rule": "Keep the polo trim and the tailored short just above the knee.",
+      "pieces": [
+        "pique polo shirt",
+        "tailored shorts",
+        "boat shoes"
+      ],
+      "basket": {
+        "amount": 94.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-white-linen-heatwave",
+      "title": "White linen heatwave",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-linen-shorts.jpg",
+      "rule": "Pair crisp white linen with ecru shorts and one dark sandal.",
+      "pieces": [
+        "premium linen shirt",
+        "linen-blend shorts",
+        "leather sandals"
+      ],
+      "basket": {
+        "amount": 109.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-relaxed-suit-tee",
+      "title": "Relaxed suit + tee",
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-relaxed-suit.jpg",
+      "rule": "Choose a soft shoulder and wear the tee close to the body for modern tailoring.",
+      "pieces": [
+        "regular-fit jacket",
+        "regular-fit suit pants",
+        "premium T-shirt",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 189.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-forest-polo-office",
+      "title": "Forest polo office",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-fine-knit-polo.jpg",
+      "rule": "Tuck the fine-knit polo fully into beige trousers and keep the footwear dark.",
+      "pieces": [
+        "fine-knit polo shirt",
+        "loose-fit tailored pants",
+        "leather loafers"
+      ],
+      "basket": {
+        "amount": 129.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-zip-cardigan-structure",
+      "title": "Zip cardigan structure",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-zip-cardigan.jpg",
+      "rule": "Use the zip knit as a soft jacket and keep the striped shirt restrained.",
+      "pieces": [
+        "zip cardigan",
+        "striped poplin shirt",
+        "pleated tailored pants",
+        "derby shoes"
+      ],
+      "basket": {
+        "amount": 199.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-navy-peacoat-heritage",
+      "title": "Navy peacoat heritage",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-peacoat-cable.jpg",
+      "rule": "A cream cable knit softens the peacoat while grey flannel keeps it formal.",
+      "pieces": [
+        "peacoat",
+        "cable-knit sweater",
+        "flannel pants",
+        "Chelsea boots"
+      ],
+      "basket": {
+        "amount": 258.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-bomber-tailored-sweat",
+      "title": "Bomber + tailored sweat",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-bomber-sweat.jpg",
+      "rule": "Use one sporty layer only; the trouser stays tapered and free of visible logos.",
+      "pieces": [
+        "MA-1 bomber",
+        "crew-neck sweatshirt",
+        "tailored joggers",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 159.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-field-jacket-fatigue",
+      "title": "Field jacket fatigue",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-field-fatigue.jpg",
+      "rule": "Olive layers work when the shirt is pale and the sand trouser stays pressed.",
+      "pieces": [
+        "field jacket",
+        "Oxford shirt",
+        "relaxed chinos",
+        "country shoes"
+      ],
+      "basket": {
+        "amount": 199.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-workwear-breton-denim",
+      "title": "Workwear Breton denim",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-workwear-breton.jpg",
+      "rule": "Keep the work jacket cropped and the stripe fine to avoid a costume effect.",
+      "pieces": [
+        "cotton workwear jacket",
+        "striped T-shirt",
+        "straight jeans",
+        "canvas sneakers"
+      ],
+      "basket": {
+        "amount": 144.96,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-half-zip-wool-minimal",
+      "title": "Half-zip wool minimal",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/hm-halfzip-wool.jpg",
+      "rule": "A compact half-zip and clean trouser break make the monochrome look deliberate.",
+      "pieces": [
+        "fine-knit half-zip",
+        "wool-blend pants",
+        "leather derby shoes"
+      ],
+      "basket": {
+        "amount": 159.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-monochrome-wide-sweat",
+      "title": "Monochrome wide sweat",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/hm-monochrome-sweat.jpg",
+      "rule": "Vary grey values and keep the sweatshirt hem exactly at the trouser rise.",
+      "pieces": [
+        "premium sweatshirt",
+        "loose-fit tailored pants",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 119.97,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "hm-black-evening-restraint",
+      "title": "Black evening restraint",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/hm-evening-black.jpg",
+      "rule": "A deep burgundy shirt supplies the only colour beneath the black tailoring.",
+      "pieces": [
+        "slim-fit evening blazer",
+        "satin shirt",
+        "tailored pants",
+        "leather derby shoes"
+      ],
+      "basket": {
+        "amount": 258.97,
+        "currency": "USD"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "hm-olive",
+      "slot": "outerwear",
+      "name": "Cotton workwear jacket",
+      "image": "assets/item-olive-overshirt.jpg",
+      "worn": "assets/tryon-hm.png",
+      "price": {
+        "amount": 109,
+        "currency": "USD"
+      },
+      "url": "https://www2.hm.com/en_us/men/campaigns/mf05263p18-atelier-prefall-2026.html",
+      "note": "Current H&M Atelier workwear shape, visualized here in muted olive.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Muted olive styling visual",
+        "material": "Cotton",
+        "pattern": "Solid",
+        "construction": "Workwear pockets; button front",
+        "native_price": "$109.00",
+        "evidence": "Official H&M Atelier listing"
+      },
+      "verified": {
+        "price": 109,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_campaign_listing",
+        "source_url": "https://www2.hm.com/en_us/men/campaigns/mf05263p18-atelier-prefall-2026.html",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    },
+    {
+      "id": "hm-merino",
+      "slot": "top",
+      "name": "Regular-fit merino wool polo",
+      "image": "assets/item-black-merino.jpg",
+      "worn": "assets/tryon-hm.png",
+      "price": {
+        "amount": 59.99,
+        "currency": "USD"
+      },
+      "url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+      "note": "Current H&M Premium Selection knit, visualized in black.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Black styling visual",
+        "material": "Merino wool",
+        "pattern": "Solid",
+        "construction": "Regular fit; knitted collar",
+        "native_price": "$59.99",
+        "evidence": "Official H&M Premium Selection listing"
+      },
+      "verified": {
+        "price": 59.99,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_category_listing",
+        "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    },
+    {
+      "id": "hm-chino",
+      "slot": "bottom",
+      "name": "Relaxed-fit linen-blend pants",
+      "image": "assets/item-ecru-chino.jpg",
+      "worn": "assets/tryon-hm.png",
+      "price": {
+        "amount": 49.99,
+        "currency": "USD"
+      },
+      "url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+      "note": "Current H&M Premium Selection relaxed trouser, visualized in ecru.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Ecru styling visual",
+        "material": "Linen blend",
+        "pattern": "Solid",
+        "construction": "Relaxed fit; straight leg",
+        "native_price": "$49.99",
+        "evidence": "Official H&M Premium Selection listing"
+      },
+      "verified": {
+        "price": 49.99,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_category_listing",
+        "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    },
+    {
+      "id": "hm-chelsea",
+      "slot": "shoes",
+      "name": "Leather Chelsea boots",
+      "image": "assets/item-black-chelsea.jpg",
+      "worn": "assets/tryon-hm.png",
+      "price": {
+        "amount": 129,
+        "currency": "USD"
+      },
+      "url": "https://www2.hm.com/en_us/men/products/shoes.html",
+      "note": "A simple black boot keeps winter layers visually grounded.",
+      "availability": "listed"
+    },
+    {
+      "id": "hm-bag",
+      "slot": "accessory",
+      "name": "Leather shoulder bag",
+      "image": "assets/item-brown-satchel.jpg",
+      "worn": "assets/tryon-hm.png",
+      "price": {
+        "amount": 169,
+        "currency": "USD"
+      },
+      "url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+      "note": "Current H&M Atelier leather accessory, styled cross-body in the avatar state.",
+      "availability": "listed",
+      "clip": "inset(20% 15% 42% 51%)",
+      "facts": {
+        "colour": "Dark brown styling visual",
+        "material": "Leather",
+        "pattern": "Solid",
+        "construction": "Shoulder strap; structured body",
+        "native_price": "$169.00",
+        "evidence": "Official H&M Atelier listing"
+      },
+      "verified": {
+        "price": 169,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_category_listing",
+        "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    }
+  ]
+}

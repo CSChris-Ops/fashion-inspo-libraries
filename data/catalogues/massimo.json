@@ -1,0 +1,711 @@
+{
+  "schema_version": 2,
+  "id": "massimo",
+  "label": "Massimo Dutti",
+  "order": 1,
+  "market": "AM",
+  "currency": "AMD",
+  "home_url": "https://www.massimodutti.com/am/en/men-n1343",
+  "logo": {
+    "src": "assets/massimo-dutti-logo.png",
+    "class": "massimo-logo"
+  },
+  "tones": [
+    "#e8e0d2",
+    "#7f7668",
+    "#293548"
+  ],
+  "try_on_model": "tryon-massimo.png",
+  "updated_at": "2026-09-21T00:00:00+04:00",
+  "seasonal": [
+    {
+      "id": "massimo-spring",
+      "season": "spring",
+      "title": "Rain-ready city layers",
+      "image": "assets/spring-ai-model.jpg",
+      "range": "8–18°C",
+      "occasion": "Workday · dinner · weekend walk",
+      "currency": "AMD",
+      "full": 315000,
+      "lite": 175000,
+      "items": [
+        {
+          "name": "Long reversible technical parka",
+          "price": 140000,
+          "url": "https://www.massimodutti.com/am/en/long-reversible-technical-parka-l03280412?pelement=65075131",
+          "note": "Use the cleaner side; keep the inner layers slim.",
+          "optional": true
+        },
+        {
+          "name": "Regular-fit check shirt",
+          "price": 45000,
+          "url": "https://www.massimodutti.com/am/en/regular-fit-check-shirt-l02006284?pelement=63984953",
+          "note": "Tuck or half-tuck to define the waist.",
+          "optional": false
+        },
+        {
+          "name": "Pleated barrel-fit pants",
+          "price": 45000,
+          "url": "https://www.massimodutti.com/am/en/pleated-barrel-fit-pants-l00184700?pelement=65726174",
+          "note": "Hem above the shoe; avoid pooling.",
+          "optional": false
+        },
+        {
+          "name": "Nappa leather boat shoes",
+          "price": 85000,
+          "url": "https://www.massimodutti.com/am/en/nappa-leather-boat-shoe-l12220850?pelement=63624582",
+          "note": "Dark brown gives the look softer contrast.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Keep the parka hem near mid-thigh so it does not shorten your legs. On dry days, leave it out and the outfit drops to <strong>175,000 AMD</strong>."
+    },
+    {
+      "id": "massimo-summer",
+      "season": "summer",
+      "title": "Cool tonal linen",
+      "image": "assets/summer-ai-model.jpg",
+      "range": "24–35°C",
+      "occasion": "Holiday · terrace · casual Friday",
+      "currency": "AMD",
+      "full": 194000,
+      "lite": 175000,
+      "items": [
+        {
+          "name": "Mercerised cotton T-shirt",
+          "price": 19000,
+          "url": "https://www.massimodutti.com/am/en/100-algodon-mercerised-cotton-tshirt-l01422208?pelement=61733941",
+          "note": "Choose white, ecru or deep navy.",
+          "optional": true
+        },
+        {
+          "name": "100% linen slim-fit shirt",
+          "price": 35000,
+          "url": "https://www.massimodutti.com/am/en/100-linen-slim-fit-shirt-l01927260?pelement=61729173",
+          "note": "Wear open as a light overshirt.",
+          "optional": false
+        },
+        {
+          "name": "100% linen jogger-fit pants",
+          "price": 55000,
+          "url": "https://www.massimodutti.com/am/en/100-linen-jogger-fit-pants-l00183014?pelement=62812118",
+          "note": "A tapered ankle keeps the line tidy.",
+          "optional": false
+        },
+        {
+          "name": "Nappa leather boat shoes",
+          "price": 85000,
+          "url": "https://www.massimodutti.com/am/en/nappa-leather-boat-shoe-l12220850?pelement=63624571",
+          "note": "Wear with invisible socks.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Keep the shirt and trousers within one light tonal family, then anchor with navy or brown shoes. In peak heat, skip the T-shirt and button the linen shirt: <strong>175,000 AMD</strong>."
+    },
+    {
+      "id": "massimo-fall",
+      "season": "fall",
+      "title": "Textured navy & tobacco",
+      "image": "assets/fall-ai-model.jpg",
+      "range": "8–20°C",
+      "occasion": "Office · drinks · gallery",
+      "currency": "AMD",
+      "full": 295000,
+      "lite": 185000,
+      "items": [
+        {
+          "name": "100% wool bomber jacket",
+          "price": 110000,
+          "url": "https://www.massimodutti.com/am/en/100-wool-bomber-jacket-total-look-l02619357?pelement=65076165",
+          "note": "The shorter length helps your proportions.",
+          "optional": true
+        },
+        {
+          "name": "100% cotton denim shirt",
+          "price": 45000,
+          "url": "https://www.massimodutti.com/am/en/100-cotton-regular-fit-denim-shirt-l00507102?pelement=67757957",
+          "note": "Use medium blue, one collar button open.",
+          "optional": false
+        },
+        {
+          "name": "Wide-leg darted pants",
+          "price": 65000,
+          "url": "https://www.massimodutti.com/am/en/wideleg-darted-pants-l03700526?pelement=67149011",
+          "note": "Tailor to a clean, single break.",
+          "optional": false
+        },
+        {
+          "name": "Leather boat shoes",
+          "price": 75000,
+          "url": "https://www.massimodutti.com/am/en/leather-boat-shoe-l12224850?pelement=62769726",
+          "note": "Tobacco brown ties the textures together.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "The wide trouser is intentional, but the bomber should finish at the belt line. For a milder day, remove the bomber and the set becomes <strong>185,000 AMD</strong>."
+    },
+    {
+      "id": "massimo-winter",
+      "season": "winter",
+      "title": "Warm monochrome",
+      "image": "assets/winter-ai-model.jpg",
+      "range": "−5–8°C",
+      "occasion": "Daily commute · evening · travel",
+      "currency": "AMD",
+      "full": 325000,
+      "lite": 325000,
+      "items": [
+        {
+          "name": "Satin down jacket",
+          "price": 110000,
+          "url": "https://www.massimodutti.com/am/en/satin-down-jacket-l03260419?pelement=63403307",
+          "note": "Navy is softer and more versatile than black.",
+          "optional": false
+        },
+        {
+          "name": "Wool-blend mock-neck sweater",
+          "price": 45000,
+          "url": "https://www.massimodutti.com/am/en/wool-blend-mock-neck-knit-sweater-l01404214?pelement=62590887",
+          "note": "Mock neck adds warmth without bulk.",
+          "optional": false
+        },
+        {
+          "name": "Wide-leg darted pants",
+          "price": 65000,
+          "url": "https://www.massimodutti.com/am/en/wideleg-darted-pants-l03700526?pelement=67149012",
+          "note": "Black or dark brown; add a thermal base below.",
+          "optional": false
+        },
+        {
+          "name": "Leather Chelsea ankle boots",
+          "price": 105000,
+          "url": "https://www.massimodutti.com/am/en/leather-chelsea-ankle-boots-l12010850?pelement=62495062",
+          "note": "A slightly substantial sole balances the jacket.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Add wool socks, scarf and heat-tech base layers—accessories are not included in the total. Keep every visible layer in navy, charcoal and black for a longer vertical line."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "massimo-rain-ready-technical-heritage",
+      "title": "Rain-ready technical heritage",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-rain-ready.jpg",
+      "rule": "Keep the technical parka long and the checked shirt tucked so the silhouette stays tailored.",
+      "pieces": [
+        "Long reversible technical parka",
+        "regular-fit check shirt",
+        "pleated barrel-fit trousers",
+        "nappa leather boat shoes"
+      ],
+      "basket": {
+        "amount": 315000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-riviera-linen-layers",
+      "title": "Riviera linen layers",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-riviera-linen.jpg",
+      "rule": "Use one family of cream, stone and tobacco; texture creates the contrast.",
+      "pieces": [
+        "mercerised cotton T-shirt",
+        "100% linen slim-fit shirt",
+        "linen jogger-fit pants",
+        "nappa leather boat shoes"
+      ],
+      "basket": {
+        "amount": 194000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-clubhouse-knit-polo",
+      "title": "Clubhouse knit polo",
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-clubhouse-knit.jpg",
+      "rule": "A fine-gauge polo and softly pleated trousers keep the club look current.",
+      "pieces": [
+        "textured knit polo",
+        "double-pleat cotton trousers",
+        "woven leather belt",
+        "split-suede loafers"
+      ],
+      "basket": {
+        "amount": 218000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-olive-field-refinement",
+      "title": "Olive field refinement",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-olive-field.jpg",
+      "rule": "Pair the utility layer with pressed trousers, never cargo pockets on both halves.",
+      "pieces": [
+        "water-repellent overshirt",
+        "cotton poplin shirt",
+        "darted wool-blend trousers",
+        "leather derby shoes"
+      ],
+      "basket": {
+        "amount": 249000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-tobacco-wool-blouson",
+      "title": "Tobacco wool blouson",
+      "seasons": [
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/massimo-tobacco-blouson.jpg",
+      "rule": "Let tobacco brown be the only warm accent against charcoal and ecru.",
+      "pieces": [
+        "wool-blend bomber jacket",
+        "merino mock-neck sweater",
+        "pleated flannel trousers",
+        "suede penny loafers"
+      ],
+      "basket": {
+        "amount": 286000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-midnight-commute",
+      "title": "Midnight commute",
+      "seasons": [
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/massimo-midnight-commute.jpg",
+      "rule": "A narrow tonal range makes practical winter layers feel formal.",
+      "pieces": [
+        "reversible technical parka",
+        "fine-knit roll neck",
+        "wool-flannel trousers",
+        "leather Chelsea boots"
+      ],
+      "basket": {
+        "amount": 342000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-navy-cardigan-weekend",
+      "title": "Navy cardigan weekend",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-navy-cardigan.jpg",
+      "rule": "Wear the cardigan as the jacket and leave the Oxford collar relaxed.",
+      "pieces": [
+        "cotton-wool cardigan",
+        "Oxford shirt",
+        "straight-fit chinos",
+        "leather moccasins"
+      ],
+      "basket": {
+        "amount": 221000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-taupe-soft-tailoring",
+      "title": "Taupe soft tailoring",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/massimo-taupe-tailoring.jpg",
+      "rule": "Unstructured shoulders and a higher trouser rise lengthen a 175 cm frame.",
+      "pieces": [
+        "relaxed wool blazer",
+        "silk-cotton polo",
+        "double-pleat trousers",
+        "leather loafers"
+      ],
+      "basket": {
+        "amount": 329000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-coastal-navy-linen",
+      "title": "Coastal navy linen",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-coastal-navy.jpg",
+      "rule": "Balance a dark linen shirt with airy stone trousers and sockless loafers.",
+      "pieces": [
+        "100% linen shirt",
+        "cotton-linen drawstring trousers",
+        "braided leather belt",
+        "boat shoes"
+      ],
+      "basket": {
+        "amount": 203000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-cable-knit-tennis-club",
+      "title": "Cable-knit tennis club",
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-tennis-club.jpg",
+      "rule": "Keep the cable knit slim and the trouser hem clean above the shoe.",
+      "pieces": [
+        "cotton cable-knit sweater",
+        "pique polo shirt",
+        "tapered cotton trousers",
+        "split-suede loafers"
+      ],
+      "basket": {
+        "amount": 232000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-suede-pleated-evening",
+      "title": "Suede pleated evening",
+      "seasons": [
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-suede-evening.jpg",
+      "rule": "The cropped suede layer should meet the waistband of the fuller trouser.",
+      "pieces": [
+        "split-suede blouson",
+        "merino crew-neck sweater",
+        "wide pleated trousers",
+        "leather derby shoes"
+      ],
+      "basket": {
+        "amount": 376000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-camel-winter-column",
+      "title": "Camel winter column",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/massimo-camel-column.jpg",
+      "rule": "Repeat camel once, then ground the outfit with chocolate leather.",
+      "pieces": [
+        "wool-cashmere overcoat",
+        "cashmere roll neck",
+        "flannel trousers",
+        "leather ankle boots"
+      ],
+      "basket": {
+        "amount": 419000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-navy-overcoat-library",
+      "title": "Navy overcoat library",
+      "seasons": [
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/massimo-navy-library.jpg",
+      "rule": "A long navy coat, grey knit and charcoal trouser is the quietest formal winter formula.",
+      "pieces": [
+        "double-faced wool coat",
+        "merino polo-neck sweater",
+        "tailored wool trousers",
+        "leather lace-up shoes"
+      ],
+      "basket": {
+        "amount": 398000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-equestrian-olive-quilt",
+      "title": "Equestrian olive quilt",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-equestrian-olive.jpg",
+      "rule": "Use the quilted jacket close to the body and keep every lower layer matte.",
+      "pieces": [
+        "quilted field jacket",
+        "lambswool half-zip",
+        "corduroy trousers",
+        "leather country boots"
+      ],
+      "basket": {
+        "amount": 318000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-sand-overshirt-minimal",
+      "title": "Sand overshirt minimal",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/massimo-sand-overshirt.jpg",
+      "rule": "Match the overshirt and trousers within two shades for a longer line.",
+      "pieces": [
+        "cotton overshirt",
+        "heavyweight jersey T-shirt",
+        "straight-fit chinos",
+        "suede trainers"
+      ],
+      "basket": {
+        "amount": 179000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-monochrome-travel-knit",
+      "title": "Monochrome travel knit",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/massimo-monochrome-travel.jpg",
+      "rule": "Vary knit, wool and leather texture while keeping the colour nearly monochrome.",
+      "pieces": [
+        "knitted zip jacket",
+        "merino T-shirt",
+        "drawstring wool trousers",
+        "leather trainers"
+      ],
+      "basket": {
+        "amount": 244000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-white-linen-resort",
+      "title": "White linen resort",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-white-linen.jpg",
+      "rule": "Keep white linen relaxed, not oversized, with one tobacco accessory.",
+      "pieces": [
+        "linen camp-collar shirt",
+        "linen drawstring trousers",
+        "woven leather belt",
+        "nappa sandals"
+      ],
+      "basket": {
+        "amount": 186000,
+        "currency": "AMD"
+      }
+    },
+    {
+      "id": "massimo-merino-polo-office",
+      "title": "Merino polo office",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/massimo-merino-office.jpg",
+      "rule": "A knitted polo replaces the shirt; the trouser and shoe stay business-clean.",
+      "pieces": [
+        "merino knit polo",
+        "lightweight relaxed blazer",
+        "tailored trousers",
+        "leather penny loafers"
+      ],
+      "basket": {
+        "amount": 304000,
+        "currency": "AMD"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "md-suede",
+      "slot": "outerwear",
+      "name": "Suede-effect leather jacket",
+      "image": "assets/item-suede-jacket.jpg",
+      "worn": "assets/tryon-massimo.png",
+      "price": {
+        "amount": 349,
+        "currency": "USD"
+      },
+      "url": "https://www.massimodutti.com/am/en/men/jackets-n1457",
+      "note": "Charcoal texture keeps a neutral winter outfit refined.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Charcoal styling visual",
+        "material": "Suede-effect leather",
+        "pattern": "Solid",
+        "construction": "Zip front; shirt collar",
+        "native_price": "$349 reference",
+        "evidence": "Official category route; exact live item pending"
+      }
+    },
+    {
+      "id": "md-polo",
+      "slot": "top",
+      "name": "Cable-knit cotton polo",
+      "image": "assets/item-cream-polo.jpg",
+      "worn": "assets/tryon-massimo.png",
+      "price": {
+        "amount": 109,
+        "currency": "USD"
+      },
+      "url": "https://www.massimodutti.com/am/en/men/polos-n1439",
+      "note": "Cream knit adds texture without breaking a tonal palette.",
+      "availability": "listed"
+    },
+    {
+      "id": "md-trouser",
+      "slot": "bottom",
+      "name": "Pleated wool-blend trousers",
+      "image": "assets/item-stone-trouser.jpg",
+      "worn": "assets/tryon-massimo.png",
+      "price": {
+        "amount": 149,
+        "currency": "USD"
+      },
+      "url": "https://www.massimodutti.com/am/en/men/trousers-n1433",
+      "note": "A higher rise and soft pleat lengthen the leg line.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Stone styling visual",
+        "material": "Wool blend",
+        "pattern": "Solid",
+        "construction": "High rise; front pleats",
+        "native_price": "$149 reference",
+        "evidence": "Official category route; exact live item pending"
+      }
+    },
+    {
+      "id": "md-loafer",
+      "slot": "shoes",
+      "name": "Leather penny loafers",
+      "image": "assets/item-brown-loafer.jpg",
+      "worn": "assets/tryon-massimo.png",
+      "price": {
+        "amount": 179,
+        "currency": "USD"
+      },
+      "url": "https://www.massimodutti.com/am/en/men/shoes-n1462",
+      "note": "Dark brown leather softens monochrome tailoring.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Dark brown styling visual",
+        "material": "Leather",
+        "pattern": "Solid",
+        "construction": "Penny strap; stacked sole",
+        "native_price": "$179 reference",
+        "evidence": "Official category route; exact live item pending"
+      }
+    },
+    {
+      "id": "md-belt",
+      "slot": "accessory",
+      "name": "Nappa leather belt",
+      "image": "assets/item-brown-belt.jpg",
+      "worn": "assets/tryon-massimo.png",
+      "price": {
+        "amount": 69,
+        "currency": "USD"
+      },
+      "url": "https://www.massimodutti.com/am/en/men/accessories/belts-n1475",
+      "note": "Match it with brown footwear for one continuous accent.",
+      "availability": "listed",
+      "clip": "inset(39% 35% 54%)"
+    }
+  ]
+}

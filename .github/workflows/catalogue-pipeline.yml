@@ -1,0 +1,62 @@
+name: Catalogue pipeline
+
+# Rebuilds the catalogue manifest whenever catalogue data changes, merges change
+# files dropped into data/inbox/, and re-checks product links on a schedule.
+# Open pages poll data/manifest.json and pull only the catalogues whose hash
+# changed, so a commit from this workflow reaches visitors within minutes.
+
+on:
+  push:
+    branches: [main]
+    paths: ['data/**', 'scripts/catalogue-pipeline.mjs']
+  pull_request:
+    paths: ['data/**', 'scripts/catalogue-pipeline.mjs']
+  schedule:
+    - cron: '17 */6 * * *'
+  workflow_dispatch:
+    inputs:
+      check_links:
+        description: 'Check every product link'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: catalogue-pipeline
+  cancel-in-progress: false
+
+jobs:
+  validate:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Validate catalogues (inbox files are applied on merge)
+        run: node scripts/catalogue-pipeline.mjs --no-inbox
+
+  build:
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Build manifest
+        run: |
+          if [ "${{ github.event_name }}" = "schedule" ] || [ "${{ inputs.check_links }}" = "true" ]; then
+            node scripts/catalogue-pipeline.mjs --check-links
+          else
+            node scripts/catalogue-pipeline.mjs
+          fi
+      - name: Commit generated files
+        run: |
+          if [ -z "$(git status --porcelain)" ]; then echo "No catalogue changes"; exit 0; fi
+          git config user.name "catalogue-pipeline[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data sw.js
+          git commit -m "Update catalogue manifest"
+          git push
