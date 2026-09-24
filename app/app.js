@@ -65,6 +65,7 @@
     const g=getFitGuidance(height,weight);
     hasFitProfile=true;heightInput.value=height;weightInput.value=weight;
     $('#userMetrics').textContent=`${height} cm · ${weight} kg`;
+    const setFit=$('#fitBriefSet');if(setFit)setFit.hidden=true;
     $('#fitTop').textContent=g.top;$('#fitTrouser').textContent=g.trouser;$('#fitHem').textContent=g.hem;
     $('#fitRuleStart').textContent=`Begin around ${g.top} for tops and outerwear and ${g.trouser} for trousers. This is a starting point only—compare the product measurements with a garment you already own.`;
     $('#fitRuleLength').textContent=`At ${height} cm, prioritize ${g.lengthCopy}. Tailor wide-leg styles when the fabric pools over the shoe.`;
@@ -329,7 +330,7 @@
     $('#savedList').innerHTML=rows.map(({key,info})=>`<span class="saved-chip">${info.outfit?`<button type="button" class="saved-open" data-load-outfit="${esc(info.outfit)}">${esc(info.label)} · ${esc(money(info.usd))}</button>`:`${esc(info.label)} · ${esc(money(info.usd))}`}<button type="button" data-unsave="${esc(key)}" aria-label="Remove ${esc(info.label)} from saved">×</button></span>`).join('');
   }
   $('#savedTrigger').addEventListener('click',()=>{
-    if(!Number($('#savedCount').textContent)){toast('Nothing saved yet — use “Save look” on any card.');return}
+    if(!Number($('#savedCount').textContent)){toast('Nothing saved yet — save an outfit in Mix & Match, or a look or formula in Lookboards.');return}
     savedPanel.scrollIntoView({behavior:'smooth',block:'center'});
   });
 
