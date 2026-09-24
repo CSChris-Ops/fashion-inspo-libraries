@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "content_hash": "3c29485ae8b90aaf",
-  "generated_at": "2026-09-21T00:00:00+04:00",
+  "content_hash": "61c940a5e40fc701",
+  "generated_at": "2026-09-24T11:47:11.133Z",
   "sync": {
     "poll_seconds": 300
   },
@@ -10,8 +10,8 @@
       "id": "hm",
       "label": "H&M",
       "path": "data/catalogues/hm.json",
-      "hash": "09befd7491b4c2e1",
-      "updated_at": "2026-09-21T00:00:00+04:00",
+      "hash": "ba44a5b41fcd5b11",
+      "updated_at": "2026-09-24T11:47:11.133Z",
       "counts": {
         "seasonal": 4,
         "formulas": 24,
@@ -22,8 +22,8 @@
       "id": "massimo",
       "label": "Massimo Dutti",
       "path": "data/catalogues/massimo.json",
-      "hash": "346a47c4938f7bf3",
-      "updated_at": "2026-09-21T00:00:00+04:00",
+      "hash": "a4e713d467736e5e",
+      "updated_at": "2026-09-24T11:47:11.133Z",
       "counts": {
         "seasonal": 4,
         "formulas": 18,
@@ -34,8 +34,8 @@
       "id": "uniqlo",
       "label": "UNIQLO",
       "path": "data/catalogues/uniqlo.json",
-      "hash": "e20716cd0b019f71",
-      "updated_at": "2026-09-21T00:00:00+04:00",
+      "hash": "63d8769f0233ab48",
+      "updated_at": "2026-09-24T11:47:11.133Z",
       "counts": {
         "seasonal": 4,
         "formulas": 24,
@@ -46,8 +46,8 @@
       "id": "zara",
       "label": "Zara",
       "path": "data/catalogues/zara.json",
-      "hash": "169910bba499db4d",
-      "updated_at": "2026-09-21T00:00:00+04:00",
+      "hash": "c26fd0495279c2fa",
+      "updated_at": "2026-09-24T11:47:11.133Z",
       "counts": {
         "seasonal": 4,
         "formulas": 18,
@@ -61,7 +61,7 @@
   },
   "wardrobe": {
     "path": "data/wardrobe.json",
-    "hash": "581084dbc3375acc",
+    "hash": "135e870122aecb94",
     "pieces": 282
   },
   "assets": [

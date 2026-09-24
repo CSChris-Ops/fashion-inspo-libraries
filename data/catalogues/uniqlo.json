@@ -16,7 +16,7 @@
     "#53604e"
   ],
   "try_on_model": "tryon-uniqlo.png",
-  "updated_at": "2026-09-21T00:00:00+04:00",
+  "updated_at": "2026-09-24T11:47:11.133Z",
   "seasonal": [
     {
       "id": "uniqlo-spring",
@@ -748,7 +748,12 @@
       },
       "url": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers",
       "note": "Lightweight structure for a clean everyday line.",
-      "availability": "listed"
+      "availability": "listed",
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:07.116Z"
+      }
     },
     {
       "id": "u-knit",
@@ -778,6 +783,11 @@
         "source_kind": "official_product_page",
         "source_url": "https://www.uniqlo.com/us/en/products/E482325-000/00?colorDisplayCode=31",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:07.329Z"
       }
     },
     {
@@ -800,6 +810,11 @@
         "construction": "Short sleeve; three-button placket",
         "native_price": "$49.90 reference",
         "evidence": "Official category route; exact live colour pending"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:07.849Z"
       }
     },
     {
@@ -830,6 +845,11 @@
         "source_kind": "official_product_page",
         "source_url": "https://www.uniqlo.com/us/en/products/E487220-000/00?colorDisplayCode=38",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:08.125Z"
       }
     },
     {
@@ -844,7 +864,12 @@
       },
       "url": "https://www.uniqlo.com/us/en/men/accessories/shoes",
       "note": "A versatile light finish for denim, chinos and pleated trousers.",
-      "availability": "listed"
+      "availability": "unavailable",
+      "link_check": {
+        "state": "dead",
+        "status": 404,
+        "checked_at": "2026-09-24T11:47:08.437Z"
+      }
     },
     {
       "id": "u-glasses",
@@ -858,8 +883,13 @@
       },
       "url": "https://www.uniqlo.com/us/en/men/accessories",
       "note": "Tortoiseshell adds quiet contrast to navy and cream.",
-      "availability": "listed",
-      "clip": "inset(5% 36% 83%)"
+      "availability": "unavailable",
+      "clip": "inset(5% 36% 83%)",
+      "link_check": {
+        "state": "dead",
+        "status": 404,
+        "checked_at": "2026-09-24T11:47:08.713Z"
+      }
     }
   ]
 }

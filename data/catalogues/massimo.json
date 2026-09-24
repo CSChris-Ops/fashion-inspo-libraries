@@ -16,7 +16,7 @@
     "#293548"
   ],
   "try_on_model": "tryon-massimo.png",
-  "updated_at": "2026-09-21T00:00:00+04:00",
+  "updated_at": "2026-09-24T11:47:11.133Z",
   "seasonal": [
     {
       "id": "massimo-spring",
@@ -632,6 +632,11 @@
         "construction": "Zip front; shirt collar",
         "native_price": "$349 reference",
         "evidence": "Official category route; exact live item pending"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:08.310Z"
       }
     },
     {
@@ -646,7 +651,12 @@
       },
       "url": "https://www.massimodutti.com/am/en/men/polos-n1439",
       "note": "Cream knit adds texture without breaking a tonal palette.",
-      "availability": "listed"
+      "availability": "listed",
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:09.161Z"
+      }
     },
     {
       "id": "md-trouser",
@@ -668,6 +678,11 @@
         "construction": "High rise; front pleats",
         "native_price": "$149 reference",
         "evidence": "Official category route; exact live item pending"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:09.658Z"
       }
     },
     {
@@ -682,7 +697,7 @@
       },
       "url": "https://www.massimodutti.com/am/en/men/shoes-n1462",
       "note": "Dark brown leather softens monochrome tailoring.",
-      "availability": "listed",
+      "availability": "unavailable",
       "facts": {
         "colour": "Dark brown styling visual",
         "material": "Leather",
@@ -690,6 +705,11 @@
         "construction": "Penny strap; stacked sole",
         "native_price": "$179 reference",
         "evidence": "Official category route; exact live item pending"
+      },
+      "link_check": {
+        "state": "dead",
+        "status": 404,
+        "checked_at": "2026-09-24T11:47:08.578Z"
       }
     },
     {
@@ -704,8 +724,13 @@
       },
       "url": "https://www.massimodutti.com/am/en/men/accessories/belts-n1475",
       "note": "Match it with brown footwear for one continuous accent.",
-      "availability": "listed",
-      "clip": "inset(39% 35% 54%)"
+      "availability": "unavailable",
+      "clip": "inset(39% 35% 54%)",
+      "link_check": {
+        "state": "dead",
+        "status": 404,
+        "checked_at": "2026-09-24T11:47:08.732Z"
+      }
     }
   ]
 }

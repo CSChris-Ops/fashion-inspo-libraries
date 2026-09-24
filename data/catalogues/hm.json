@@ -16,7 +16,7 @@
     "#3f4c3e"
   ],
   "try_on_model": "tryon-hm.png",
-  "updated_at": "2026-09-21T00:00:00+04:00",
+  "updated_at": "2026-09-24T11:47:11.133Z",
   "seasonal": [
     {
       "id": "hm-spring",
@@ -776,6 +776,11 @@
         "source_kind": "official_campaign_listing",
         "source_url": "https://www2.hm.com/en_us/men/campaigns/mf05263p18-atelier-prefall-2026.html",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:06.385Z"
       }
     },
     {
@@ -806,6 +811,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:06.311Z"
       }
     },
     {
@@ -836,6 +846,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:06.476Z"
       }
     },
     {
@@ -850,7 +865,12 @@
       },
       "url": "https://www2.hm.com/en_us/men/products/shoes.html",
       "note": "A simple black boot keeps winter layers visually grounded.",
-      "availability": "listed"
+      "availability": "listed",
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:06.788Z"
+      }
     },
     {
       "id": "hm-bag",
@@ -881,6 +901,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www2.hm.com/en_us/men/products/premium-selection.html?page=1",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:06.565Z"
       }
     }
   ]

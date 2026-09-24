@@ -16,7 +16,7 @@
     "#1e252d"
   ],
   "try_on_model": "tryon-zara.png",
-  "updated_at": "2026-09-21T00:00:00+04:00",
+  "updated_at": "2026-09-24T11:47:11.133Z",
   "seasonal": [
     {
       "id": "zara-spring",
@@ -632,6 +632,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www.zara.com/am/en/man-blazers-casual-l612.html",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:09.351Z"
       }
     },
     {
@@ -662,6 +667,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www.zara.com/am/en/man-shirts-dress-l4571.html",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:09.335Z"
       }
     },
     {
@@ -692,6 +702,11 @@
         "source_kind": "official_category_listing",
         "source_url": "https://www.zara.com/am/en/man-trousers-casual-l843.html",
         "verified_at": "2026-09-21T00:00:00+04:00"
+      },
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:09.424Z"
       }
     },
     {
@@ -706,7 +721,12 @@
       },
       "url": "https://www.zara.com/am/en/man-shoes-l769.html",
       "note": "Low-contrast white footwear for relaxed spring and summer looks.",
-      "availability": "listed"
+      "availability": "listed",
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:10.769Z"
+      }
     },
     {
       "id": "z-watch",
@@ -721,7 +741,12 @@
       "url": "https://www.zara.com/am/en/man-accessories-l537.html",
       "note": "A restrained black dial for clean formal outfits.",
       "availability": "listed",
-      "clip": "inset(39% 18% 49% 68%)"
+      "clip": "inset(39% 18% 49% 68%)",
+      "link_check": {
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-09-24T11:47:11.114Z"
+      }
     }
   ]
 }
