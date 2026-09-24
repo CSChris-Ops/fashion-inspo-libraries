@@ -23,6 +23,20 @@ The interface uses a neutral pastel glass system with layered translucency, soft
 
 Open `index.html` directly or serve the repository with any static web server. Live sync and the saved copy need http(s) (GitHub Pages or `localhost`); opened as a file, the page still works from the built-in copy in `data/seed.js`.
 
+## Mix & Match (flagship)
+
+Mix & Match is the landing view. Every item in every catalogue — verified products, seasonal-look items and each piece named in a formula — is its own wearable piece (282 today), drawn separately on a layered avatar by garment type, colour, pattern, fit and length. Anything can be combined with anything, inside one brand or across brands.
+
+- Nine slots: outerwear, knit layer, top, bottoms, shoes, belt, watch, bag and eyewear; tuck the top in or out, open or close the jacket
+- A live match chance scores colour, formality, season and proportion, with plain-language notes; every wardrobe card shows the chance it would give
+- Shuffle rolls a weighted random outfit, Complete the look fills the empty slots with the best options, and locks keep chosen pieces in place
+- Crossover or same-brand mode, season filter, search and sorting; colour previews, undo, saved outfits and shareable outfit links
+- Match odds compare every catalogue with crossover mixes: outfits possible, share that come out Good or Strong, and the best sampled outfit
+- Every lookboard, seasonal look and formula has a "Try on" button that loads its pieces onto the avatar
+- Avatar skin, hair and build options; build follows the fit settings
+
+The same engine is published as `data/wardrobe.json` and as `FashionLibrary.studio` in the page. See [API.md](API.md).
+
 ## Catalogue data and sync
 
 Catalogue content no longer lives inside `index.html`. Each brand is one file, so more catalogues can be added without touching the page:
@@ -30,6 +44,7 @@ Catalogue content no longer lives inside `index.html`. Each brand is one file, s
 ```
 data/catalogues/<brand>.json   seasonal looks, formulas and products for one brand
 data/lookboards.json           the shop-the-composition boards
+data/wardrobe.json             generated: every Mix & Match piece, mappings and match odds
 data/catalogue.json            manual verification ledger (overlaid onto products)
 data/manifest.json             generated: content hash per catalogue
 data/seed.js                   generated: built-in copy for first paint and file://

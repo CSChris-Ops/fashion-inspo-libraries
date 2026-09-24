@@ -2,12 +2,12 @@
 // visitor has seen stored on the device, so returning visits never re-download
 // what is already there. The version line below is rewritten by
 // scripts/catalogue-pipeline.mjs whenever catalogue content changes.
-const CACHE_VERSION='fil-9e4dcd77eaff6c0a';
+const CACHE_VERSION='fil-3c29485ae8b90aaf';
 const SHELL_CACHE=`${CACHE_VERSION}-shell`;
 const DATA_CACHE='fil-data';
 const ASSET_CACHE='fil-assets-v1';
 const ASSET_LIMIT=1500;
-const SHELL=['./','index.html','app/store.js','app/sync.js','app/app.js','data/seed.js','data/manifest.json'];
+const SHELL=['./','index.html','app/store.js','app/sync.js','app/wardrobe.js','app/avatar.js','app/studio.js','app/app.js','data/seed.js','data/manifest.json'];
 
 self.addEventListener('install',event=>{
   event.waitUntil(caches.open(SHELL_CACHE).then(cache=>cache.addAll(SHELL)).then(()=>self.skipWaiting()));
