@@ -21,6 +21,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { createRequire } from 'node:module';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const args = new Set(process.argv.slice(2));
@@ -260,7 +261,27 @@ const manifestCatalogues = entries.map(entry => {
 const lookboardText = pretty(lookboards);
 outputs.set('data/lookboards.json', lookboardText);
 
-const contentHash = hash(manifestCatalogues.map(c => c.hash).join('|') + hash(lookboardText));
+// Piece-by-piece wardrobe for Mix & Match and the public API (same engine the site runs).
+const require = createRequire(import.meta.url);
+const W = require('../app/wardrobe.js');
+const built = W.build(entries.map(e => e.data));
+for (const miss of built.skipped) notes.push(`wardrobe: could not classify "${miss}"`);
+const countBy = key => built.pieces.reduce((acc, piece) => ({ ...acc, [piece[key]]: (acc[piece[key]] || 0) + 1 }), {});
+const wardrobeDoc = {
+  schema_version: 1,
+  generated_at: manifestCatalogues.map(c => c.updated_at).sort().at(-1),
+  slots: W.SLOTS,
+  counts: { pieces: built.pieces.length, by_slot: countBy('slot'), by_brand: countBy('brand') },
+  pieces: built.pieces,
+  formulas: built.byFormula,
+  seasonal: built.bySeasonal,
+  aliases: Object.fromEntries([...built.aliases].filter(([alias, id]) => alias !== id)),
+  odds: W.odds(built, { samples: 1500 })
+};
+const wardrobeText = JSON.stringify(wardrobeDoc) + '\n';
+outputs.set('data/wardrobe.json', wardrobeText);
+
+const contentHash = hash(manifestCatalogues.map(c => c.hash).join('|') + hash(lookboardText) + hash(wardrobeText));
 const manifest = {
   schema_version: 2,
   content_hash: contentHash,
@@ -268,6 +289,7 @@ const manifest = {
   sync: { poll_seconds: 300 },
   catalogues: manifestCatalogues,
   lookboards: { path: 'data/lookboards.json', hash: hash(lookboardText) },
+  wardrobe: { path: 'data/wardrobe.json', hash: hash(wardrobeText), pieces: built.pieces.length },
   assets: [...assets].sort()
 };
 const manifestText = pretty(manifest);
@@ -298,7 +320,7 @@ for (const [rel, text] of outputs) {
 
 for (const note of notes) console.log('•', note);
 const totals = manifestCatalogues.reduce((t, c) => ({ s: t.s + c.counts.seasonal, f: t.f + c.counts.formulas, p: t.p + c.counts.products }), { s: 0, f: 0, p: 0 });
-console.log(`✓ ${manifestCatalogues.length} catalogues · ${totals.s} seasonal looks · ${totals.f} formulas · ${totals.p} products · ${assets.size} assets · content ${contentHash}`);
+console.log(`✓ ${manifestCatalogues.length} catalogues · ${totals.s} seasonal looks · ${totals.f} formulas · ${totals.p} products · ${built.pieces.length} Mix & Match pieces · ${assets.size} assets · content ${contentHash}`);
 if (CHECK && stale.length) {
   console.error(`✖ generated files are out of date: ${stale.join(', ')}\n  run: node scripts/catalogue-pipeline.mjs`);
   process.exit(1);
