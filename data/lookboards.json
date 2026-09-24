@@ -1,0 +1,71 @@
+{
+  "schema_version": 2,
+  "updated_at": "2026-09-21T00:00:00+04:00",
+  "boards": [
+    {
+      "id": "board-0",
+      "label": "Massimo Dutti",
+      "title": "Charcoal + stone restraint",
+      "model": "assets/tryon-massimo.png",
+      "items": [
+        "md-suede",
+        "md-polo",
+        "md-trouser",
+        "md-loafer"
+      ],
+      "optional_slot": "outerwear"
+    },
+    {
+      "id": "board-1",
+      "label": "Zara",
+      "title": "Navy city ease",
+      "model": "assets/tryon-zara.png",
+      "items": [
+        "z-navy-blazer",
+        "z-oxford",
+        "z-trouser",
+        "z-sneaker"
+      ],
+      "optional_slot": "outerwear"
+    },
+    {
+      "id": "board-2",
+      "label": "H&M",
+      "title": "Utility weekend",
+      "model": "assets/tryon-hm.png",
+      "items": [
+        "hm-olive",
+        "hm-merino",
+        "hm-chino",
+        "hm-chelsea"
+      ],
+      "optional_slot": "outerwear"
+    },
+    {
+      "id": "board-3",
+      "label": "UNIQLO",
+      "title": "LifeWear soft structure",
+      "model": "assets/tryon-uniqlo.png",
+      "items": [
+        "u-jacket",
+        "u-knit",
+        "u-pleats",
+        "u-sneaker"
+      ],
+      "optional_slot": "outerwear"
+    },
+    {
+      "id": "board-4",
+      "label": "Cross-brand edit",
+      "title": "Forest polo + stone tailoring",
+      "model": "assets/inspo-green-polo.png",
+      "items": [
+        "u-green-polo",
+        "md-trouser",
+        "md-belt",
+        "md-loafer"
+      ],
+      "optional_slot": "outerwear"
+    }
+  ]
+}
