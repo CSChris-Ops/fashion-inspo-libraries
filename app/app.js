@@ -153,7 +153,7 @@
       <div class="content"><h2>${esc(look.title)}</h2><p class="occasion">${esc(look.occasion)}</p>
         <ul class="items">${(look.items||[]).map(item=>`<li${item.optional?' data-layer="optional"':''}><a href="${esc(safeUrl(item.url))}" target="_blank" rel="noreferrer">${esc(item.name)}<span class="item-note">${esc(item.note)}</span></a><span class="price">${priceHTML(item.price,currency)}</span></li>`).join('')}</ul>
         <div class="total"><span>${lite?'Lighter version':'Complete outfit'}</span><b>${esc(money(toUSD(lite?look.lite:look.full,currency)))}</b></div>
-        <div class="card-actions"><button class="card-action" type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save look'}</button><button class="card-action" type="button" data-lite="${esc(key)}" aria-pressed="${lite}"${noLite?` disabled title="Every layer is recommended for this look"`:''}>${noLite?(look.season==='winter'?'Winter-ready':'All layers needed'):lite?'Restore full set':'Lighter version'}</button></div>
+        <div class="card-actions"><button class="card-action" type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save look'}</button><button class="card-action" type="button" data-lite="${esc(key)}" aria-pressed="${lite}"${noLite?` disabled title="Every layer is recommended for this look"`:''}>${noLite?(look.season==='winter'?'Winter-ready':'All layers needed'):lite?'Restore full set':'Lighter version'}</button><button class="card-action try-on" type="button" data-try-look="${esc(look.id)}">Try on in Mix &amp; Match</button></div>
         <aside class="advice"><h3>${esc(look.advice_title||'Styling cue')}</h3><p>${rich(look.advice)}</p></aside>
       </div></article>`;
   }
@@ -182,7 +182,7 @@
       <p class="formula-rule">${esc(f.rule)}</p>
       <div class="tone-row" aria-label="Colour palette">${(cat.tones||[]).filter(t=>/^#[0-9a-f]{3,8}$/i.test(t)).map(t=>`<span class="tone" style="--tone:${t}"></span>`).join('')}</div>
       <div class="brand-pair"><div class="brand-block" data-brand="${esc(cat.id)}"><b>${esc(cat.label)} only</b><span>${esc((f.pieces||[]).join(' · '))}</span><span><strong>Complete basket: ${esc(basket)}</strong></span><a href="${esc(safeUrl(cat.home_url))}" target="_blank" rel="noreferrer">Shop ${esc(cat.label)} ↗</a></div></div>
-      <div class="formula-actions"><button type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save formula'}</button></div>
+      <div class="formula-actions"><button type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save formula'}</button><button type="button" data-try-formula="${esc(f.id)}">Try on</button></div>
     </article>`;
   }
 
@@ -240,36 +240,31 @@
       const key=`board:${board.id}`,isSaved=saved.has(key),lite=liteBoards.has(board.id);
       const optional=items.find(x=>x.product.slot===board.optional_slot);
       const total=items.filter(x=>!(lite&&x===optional)).reduce((sum,x)=>sum+toUSD(x.product.price.amount,x.product.price.currency),0);
-      return`<article class="lookboard${lite?' is-lite':''}" data-board="${esc(board.id)}"><div class="lookboard-model"><img src="${esc(safeAsset(board.model))}" alt="AI model wearing ${esc(board.title)}" loading="lazy"></div><div class="lookboard-details"><div class="lookboard-copy"><small>${esc(board.label)}</small><h3>${esc(board.title)}</h3><span class="lookboard-total">${esc(money(total))}${lite?' · lighter':''}</span></div><div class="flatlay">${items.map(({product})=>`<button class="piece${lite&&optional&&product.id===optional.product.id?' is-removed':''}" type="button" data-product="${esc(product.id)}" aria-label="View ${esc(product.name)} details"><img src="${esc(safeAsset(product.image))}" alt="${esc(product.name)}" loading="lazy"><span>${esc(slotLabels[product.slot])}</span></button>`).join('')}</div><div class="lookboard-actions"><button type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save look'}</button><button type="button" data-board-lite="${esc(board.id)}" aria-pressed="${lite}"${optional?'':` disabled title="This board has no optional outer layer"`}>${optional?(lite?'Restore full look':'Lighter version'):'All pieces needed'}</button></div></div></article>`;
+      return`<article class="lookboard${lite?' is-lite':''}" data-board="${esc(board.id)}"><div class="lookboard-model"><img src="${esc(safeAsset(board.model))}" alt="AI model wearing ${esc(board.title)}" loading="lazy"></div><div class="lookboard-details"><div class="lookboard-copy"><small>${esc(board.label)}</small><h3>${esc(board.title)}</h3><span class="lookboard-total">${esc(money(total))}${lite?' · lighter':''}</span></div><div class="flatlay">${items.map(({product})=>`<button class="piece${lite&&optional&&product.id===optional.product.id?' is-removed':''}" type="button" data-product="${esc(product.id)}" aria-label="View ${esc(product.name)} details"><img src="${esc(safeAsset(product.image))}" alt="${esc(product.name)}" loading="lazy"><span>${esc(slotLabels[product.slot])}</span></button>`).join('')}</div><div class="lookboard-actions"><button type="button" data-save="${esc(key)}" aria-pressed="${isSaved}">${isSaved?'Saved ✓':'Save look'}</button><button type="button" data-board-lite="${esc(board.id)}" aria-pressed="${lite}"${optional?'':` disabled title="This board has no optional outer layer"`}>${optional?(lite?'Restore full look':'Lighter version'):'All pieces needed'}</button><button type="button" class="board-try" data-try-board="${esc(board.id)}">Try on in Mix &amp; Match</button></div></div></article>`;
     }).join('');
   }
 
   // ---------------------------------------------------------------- studio
   const slotLabels={outerwear:'Outerwear',top:'Tops',bottom:'Bottoms',shoes:'Shoes',accessory:'Accessories'};
-  const layerMap={outerwear:'layerOuterwear',top:'layerTop',bottom:'layerBottom',shoes:'layerShoes',accessory:'layerAccessory'};
-  const equipped={outerwear:null,top:null,bottom:null,shoes:null,accessory:null,...(prefs.get('fil-studio')||{})};
-  const wornOf=({product,cat})=>safeAsset(product.worn)||safeAsset(`assets/${cat.try_on_model||''}`);
-  function paintLayer(slot){
-    const layer=document.getElementById(layerMap[slot]);if(!layer)return;
-    const entry=equipped[slot]&&productIndex.get(equipped[slot]);
-    if(entry){layer.src=wornOf(entry);layer.alt=`${entry.product.name} worn on model`;layer.hidden=false;layer.style.clipPath=slot==='accessory'?(entry.product.clip||'inset(0)'):''}
-    else{layer.removeAttribute('src');layer.alt='';layer.hidden=true;layer.style.clipPath=''}
-  }
-  function equip(slot,id){
-    equipped[slot]=equipped[slot]===id?null:id;prefs.set('fil-studio',equipped);
-    const layer=document.getElementById(layerMap[slot]);
-    if(layer){layer.classList.add('is-changing');setTimeout(()=>{paintLayer(slot);layer.classList.remove('is-changing')},140)}
-    renderWardrobe();
-  }
-  function renderWardrobe(){
-    for(const slot of Object.keys(equipped))if(equipped[slot]&&!productIndex.has(equipped[slot]))equipped[slot]=null;
-    const panel=$('#wardrobePanel');
-    const all=[...productIndex.values()];
-    panel.innerHTML=Object.keys(slotLabels).map(slot=>`<section class="slot"><div class="slot-head"><h3>${slotLabels[slot]}</h3><button class="remove-slot" type="button" data-remove-slot="${slot}"${equipped[slot]?'':' disabled'}>${equipped[slot]?'Remove':'None equipped'}</button></div><div class="slot-options">${all.filter(x=>x.product.slot===slot).map(({product,cat})=>`<div class="option-wrap"><button class="wardrobe-option" type="button" data-equip="${esc(product.id)}" aria-pressed="${equipped[slot]===product.id}"><img src="${esc(safeAsset(product.image))}" alt="" loading="lazy"><b>${esc(product.name)}${product._edited?'<span class="edited-flag">updated</span>':''}</b><small>${esc(cat.label)} · ${esc(money(toUSD(product.price.amount,product.price.currency)))}</small></button><button class="option-info" type="button" data-info="${esc(product.id)}" aria-label="Details for ${esc(product.name)}">i</button></div>`).join('')}</div></section>`).join('')+
-      `<div class="studio-total"><div><span>Complete outfit</span><strong id="studioPrice"></strong></div><button class="reset-look" type="button" id="resetLook">Reset avatar</button></div>`;
-    const selected=Object.values(equipped).filter(Boolean).map(id=>productIndex.get(id)).filter(Boolean);
-    $('#studioPrice').textContent=money(selected.reduce((sum,x)=>sum+toUSD(x.product.price.amount,x.product.price.currency),0));
-    $('#selectedCount').textContent=`${selected.length} / 5 selected`;
+
+  // ---------------------------------------------------------------- Mix & Match studio (app/studio.js)
+  const OUTFITS_KEY='fil-outfits';
+  const outfits=prefs.get(OUTFITS_KEY)||{};
+  let studio=null;
+  const showStudio=()=>{withTransition(()=>{setMainView('studio');window.scrollTo({top:0,behavior:'smooth'})})};
+  function mountStudio(){
+    studio=window.FIL.studio.mount({
+      root:$('#studioView'),prefs,esc,safeUrl,money,toUSD,
+      toast,getFit:()=>prefs.get(profileKey),
+      openProduct:id=>{if(!productIndex.has(id))return false;openProduct(id);return true},
+      saveOutfit:outfit=>{
+        if(!Object.keys(outfit.ids).length){toast('Put at least one piece on the avatar first.');return}
+        const id=`o${Date.now().toString(36)}`;outfits[id]={...outfit,at:new Date().toISOString()};prefs.set(OUTFITS_KEY,outfits);
+        saved.add(`outfit:${id}`);persistSaved();renderSaved();
+        toast(`Outfit saved · ${outfit.score}% match chance.`,{action:'View saved',onAction:()=>savedPanel.scrollIntoView({behavior:'smooth',block:'center'})});
+      }
+    });
+    window.FashionLibrary&&(window.FashionLibrary.studio=studio);
   }
 
   // ---------------------------------------------------------------- product dialog (+ local corrections)
@@ -292,13 +287,13 @@
     if(product.link_check)rows.push(['Link',product.link_check.state==='ok'?'Live':product.link_check.state==='dead'?'Page removed':'Could not verify automatically']);
     $('#productFacts').innerHTML=rows.map(([k,val])=>`<dt>${esc(k)}</dt><dd>${esc(val)}</dd>`).join('');
     $('#productLink').href=safeUrl(product.url);
-    $('#productWear').textContent=equipped[product.slot]===product.id?'Remove from look':'Add to look';
+    $('#productWear').textContent='Try on in Mix & Match';
     $('#suggestPrice').value=product.price.amount;$('#suggestCurrency').value=product.price.currency;$('#suggestAvailability').value=availability;$('#suggestNote').value='';
   }
   function openProduct(id){if(!productIndex.has(id))return;activeProduct=id;fillProduct();$('#productSuggest').open=false;if(!productDialog.open)productDialog.showModal()}
   $('#productClose').addEventListener('click',()=>productDialog.close());
   productDialog.addEventListener('click',event=>{if(event.target===productDialog)productDialog.close()});
-  $('#productWear').addEventListener('click',()=>{const entry=productIndex.get(activeProduct);if(entry){equip(entry.product.slot,entry.product.id);productDialog.close()}});
+  $('#productWear').addEventListener('click',()=>{const entry=productIndex.get(activeProduct);if(entry&&studio){studio.equip([entry.product.id]);productDialog.close();showStudio()}});
   $('#suggestForm').addEventListener('submit',async event=>{
     event.preventDefault();
     const entry=productIndex.get(activeProduct);if(!entry)return;
@@ -323,6 +318,7 @@
     if(kind==='look'){const cat=catalogueIndex.get(a),look=cat&&(cat.seasonal||[]).find(l=>l.season===b);if(!look)return null;return{label:`${cat.label} · ${look.title}`,usd:toUSD(lookPrice(cat,look),look.currency||cat.currency)}}
     if(kind==='formula'){for(const cat of catalogues){const f=(cat.formulas||[]).find(x=>x.id===a);if(f)return{label:`${cat.label} · ${f.title}`,usd:f.basket?toUSD(f.basket.amount,f.basket.currency):0}}return null}
     if(kind==='board'){const board=((sync.state.lookboards||{}).boards||[]).find(x=>x.id===a);if(!board)return null;const items=board.items.map(id=>productIndex.get(id)).filter(Boolean);const optional=items.find(x=>x.product.slot===board.optional_slot);return{label:`Lookboard · ${board.title}`,usd:items.filter(x=>!(liteBoards.has(a)&&x===optional)).reduce((s,x)=>s+toUSD(x.product.price.amount,x.product.price.currency),0)}}
+    if(kind==='outfit'){const o=outfits[a];if(!o||!studio)return null;const worn=studio.describe(o.ids);if(!worn.length)return null;return{label:`Outfit · ${worn.slice(0,2).map(p=>p.name).join(' + ')}${worn.length>2?` +${worn.length-2}`:''} · ${o.score}%`,usd:studio.priceUSD(o.ids),outfit:a}}
     return null;
   }
   function renderSaved(){
@@ -330,7 +326,7 @@
     $('#savedCount').textContent=rows.length;
     savedPanel.hidden=rows.length===0;
     $('#savedTotal').textContent=money(rows.reduce((s,r)=>s+r.info.usd,0));
-    $('#savedList').innerHTML=rows.map(({key,info})=>`<span class="saved-chip">${esc(info.label)} · ${esc(money(info.usd))}<button type="button" data-unsave="${esc(key)}" aria-label="Remove ${esc(info.label)} from saved">×</button></span>`).join('');
+    $('#savedList').innerHTML=rows.map(({key,info})=>`<span class="saved-chip">${info.outfit?`<button type="button" class="saved-open" data-load-outfit="${esc(info.outfit)}">${esc(info.label)} · ${esc(money(info.usd))}</button>`:`${esc(info.label)} · ${esc(money(info.usd))}`}<button type="button" data-unsave="${esc(key)}" aria-label="Remove ${esc(info.label)} from saved">×</button></span>`).join('');
   }
   $('#savedTrigger').addEventListener('click',()=>{
     if(!Number($('#savedCount').textContent)){toast('Nothing saved yet — use “Save look” on any card.');return}
@@ -339,7 +335,7 @@
 
   // ---------------------------------------------------------------- views
   const libraryView=$('#libraryView'),studioView=$('#studioView');
-  const setMainView=view=>{const studio=view==='studio';$$('.view-tab').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.view===view)));libraryView.hidden=studio;studioView.hidden=!studio;history.replaceState(null,'',`${location.pathname}${location.search}${studio?'#studio':'#lookboards'}`)};
+  const setMainView=view=>{const studio=view==='studio';$$('.view-tab').forEach(tab=>tab.setAttribute('aria-pressed',String(tab.dataset.view===view)));libraryView.hidden=studio;studioView.hidden=!studio;if(studio&&window.FashionLibrary&&window.FashionLibrary.studio)window.FashionLibrary.studio.shown();history.replaceState(null,'',`${location.pathname}${location.search}${studio?'#studio':'#lookboards'}`)};
   $$('.view-tab').forEach(button=>button.addEventListener('click',()=>withTransition(()=>{setMainView(button.dataset.view);window.scrollTo({top:0,behavior:'smooth'})})));
 
   // ---------------------------------------------------------------- one delegated click handler
@@ -347,14 +343,16 @@
     const t=event.target.closest('button,a');if(!t)return;
     const d=t.dataset;
     if(d.save){saved.has(d.save)?saved.delete(d.save):saved.add(d.save);persistSaved();$$(`[data-save="${CSS.escape(d.save)}"]`).forEach(b=>{const on=saved.has(d.save);b.setAttribute('aria-pressed',String(on));b.textContent=on?'Saved ✓':d.save.startsWith('formula:')?'Save formula':'Save look'});renderSaved();return}
-    if(d.unsave){saved.delete(d.unsave);persistSaved();renderSaved();renderVisibleSaves();return}
+    if(d.unsave){saved.delete(d.unsave);if(d.unsave.startsWith('outfit:')){delete outfits[d.unsave.slice(7)];prefs.set(OUTFITS_KEY,outfits)}persistSaved();renderSaved();renderVisibleSaves();return}
     if(d.lite){liteLooks.has(d.lite)?liteLooks.delete(d.lite):liteLooks.add(d.lite);renderLibrary();renderSaved();return}
     if(d.boardLite){liteBoards.has(d.boardLite)?liteBoards.delete(d.boardLite):liteBoards.add(d.boardLite);renderLookboards();renderSaved();return}
     if(d.product){openProduct(d.product);return}
     if(d.info){openProduct(d.info);return}
-    if(d.equip){const entry=productIndex.get(d.equip);if(entry)equip(entry.product.slot,entry.product.id);return}
-    if(d.removeSlot){if(equipped[d.removeSlot])equip(d.removeSlot,equipped[d.removeSlot]);return}
-    if(t.id==='resetLook'){Object.keys(equipped).forEach(slot=>{equipped[slot]=null;paintLayer(slot)});prefs.set('fil-studio',equipped);renderWardrobe();return}
+    if(d.tryBoard){const board=((sync.state.lookboards||{}).boards||[]).find(b=>b.id===d.tryBoard);if(board&&studio){studio.tryAliases(board.items);showStudio()}return}
+    if(d.tryLook){if(studio&&studio.trySeasonal(d.tryLook))showStudio();return}
+    if(d.tryFormula){if(studio&&studio.tryFormula(d.tryFormula))showStudio();return}
+    if(d.loadOutfit){const o=outfits[d.loadOutfit];if(o&&studio){studio.load(o);showStudio()}return}
+    if(d.viewGo){withTransition(()=>{setMainView(d.viewGo);(d.viewGo==='studio'?$('#studioView'):$('#libraryView')).scrollIntoView({behavior:'smooth',block:'start'})});return}
     if(d.full!==undefined&&(t.classList.contains('visual')||t.classList.contains('formula-visual'))){const card=t.closest('[data-title]');$('#dialogImage').src=d.full;$('#dialogImage').alt=t.querySelector('img').alt;$('#dialogTitle').textContent=card?card.dataset.title:'';modelDialog.showModal();return}
     if(d.brandMode){withTransition(()=>{ui.brand=d.brandMode;ui.formulaLimit=24;renderLibrary()});return}
     if(d.categoryMode){withTransition(()=>{ui.category=d.categoryMode;ui.formulaLimit=24;renderLibrary()});return}
@@ -428,7 +426,9 @@
     $('#footLinks').innerHTML=[`<a href="https://www.pinterest.com/search/pins/?q=mens%20outfit%20old%20money%20minimal%20all%20seasons&rs=typed" target="_blank" rel="noreferrer">Pinterest ↗</a>`,...catalogues.map(c=>`<a href="${esc(safeUrl(c.home_url))}" target="_blank" rel="noreferrer">${esc(c.label)} ↗</a>`)].join(' · ');
   }
   function rerender(){
-    rebuild();renderChrome();renderBrandSwitch();renderBudgets();renderLookboards();renderLibrary();renderWardrobe();Object.keys(layerMap).forEach(paintLayer);renderSaved();
+    rebuild();renderChrome();renderBrandSwitch();renderBudgets();renderLookboards();renderLibrary();
+    if(!studio)mountStudio();
+    studio.refresh(catalogues);renderSaved();
     if(productDialog.open)fillProduct();
     if(libraryDialog.open)renderLibraryDialog();
   }
@@ -448,9 +448,9 @@
       firstRender=false;
       const presets={massimo:['md-suede','md-polo','md-trouser','md-loafer','md-belt'],zara:['z-navy-blazer','z-oxford','z-trouser','z-sneaker','z-watch'],hm:['hm-olive','hm-merino','hm-chino','hm-chelsea','hm-bag'],uniqlo:['u-jacket','u-knit','u-pleats','u-sneaker','u-glasses'],green:['u-green-polo','md-trouser','md-loafer','md-belt']};
       const preset=presets[params.get('preset')];
-      if(preset){Object.keys(equipped).forEach(k=>equipped[k]=null);preset.forEach(id=>{const e=productIndex.get(id);if(e)equipped[e.product.slot]=id});renderWardrobe()}
-      Object.keys(layerMap).forEach(paintLayer);
-      if(location.hash==='#studio')setMainView('studio');
+      if(preset)studio.tryAliases(preset);
+      // Mix & Match is the landing view; #lookboards opens the library instead.
+      if(location.hash==='#lookboards')setMainView('library');else{studio.openLink(location.hash);setMainView('studio')}
     }
   });
   sync.on('change',({reason,diffs})=>{

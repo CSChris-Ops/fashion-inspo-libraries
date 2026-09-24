@@ -74,6 +74,48 @@
     @media(max-width:1050px){.library-head{grid-template-columns:minmax(0,1fr)}}
     @media(max-width:900px){.stat-row{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:680px){.topbar{position:relative;top:0}.library .controls{position:relative;top:auto}.search-wrap,.search-input{width:100%}.profile{flex-wrap:wrap;gap:6px}.library-dialog-inner{padding:20px}.suggest form{grid-template-columns:1fr}.fit-actions{grid-template-columns:1fr}}
+
+    /* ---- Mix & Match studio (flagship) ---- */
+    .intro-cta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 16px}.cta-primary,.cta-secondary{border:1px solid #303331;border-radius:14px;padding:12px 18px;font:650 .86rem/1 var(--font);cursor:pointer}.cta-primary{background:#303331;color:#fff}.cta-secondary{background:rgba(255,255,255,.6);color:var(--ink)}
+    .studio-head p{color:var(--muted)}#studioCount{display:block;margin-top:6px;font-size:.78rem;font-weight:650;color:var(--ink)}
+    .mm-shell{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:18px;align-items:start}
+    .mm-stage-col{position:sticky;top:calc(var(--topbar-h) + 4px)}
+    .mm-stage-card{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;padding:14px;border:1px solid rgba(46,48,47,.1);border-radius:28px;background:linear-gradient(160deg,#f8f6f1,#ebe7df)}
+    .mm-toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.mm-seg{display:inline-flex;padding:3px;border-radius:14px;background:rgba(46,48,47,.08)}.mm-seg button{border:0;border-radius:11px;background:transparent;color:var(--ink);padding:8px 12px;font:650 .76rem/1 var(--font);cursor:pointer}.mm-seg button[aria-pressed="true"]{background:#303331;color:#fff}
+    .mm-select{border:1px solid rgba(46,48,47,.16);border-radius:12px;background:#fff;color:var(--ink);padding:8px 10px;font:600 .76rem/1 var(--font)}
+    .mm-stage{height:min(64vh,640px);min-height:420px;border-radius:22px;background:radial-gradient(ellipse at 50% 30%,#fff,#efebe4 70%);overflow:hidden}.mm-stage svg{width:100%;height:100%;display:block}
+    .av-pop{animation:avPop .38s ease both;transform-origin:50% 40%}@keyframes avPop{from{opacity:0;transform:translateY(6px) scale(.985)}to{opacity:1;transform:none}}
+    .mm-score{display:grid;grid-template-columns:auto 1fr;gap:10px 14px;align-items:center;padding:12px;border-radius:18px;background:#fff}
+    .mm-ring{--p:0;--c:#9a9a94;width:74px;height:74px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(var(--c) calc(var(--p)*1%),rgba(46,48,47,.1) 0)}.mm-ring b{display:grid;place-items:center;width:58px;height:58px;border-radius:50%;background:#fff;font-size:1.3rem;letter-spacing:-.04em}.mm-ring small{font-size:.62rem;margin-left:1px}
+    .mm-score-copy{display:grid;gap:2px}.mm-score-copy strong{font-size:1.05rem}.mm-score-copy span{color:var(--muted);font-size:.74rem}.mm-score-copy em{font-style:normal;font-size:.62rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+    .mm-bars{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}.mm-bar{display:grid;grid-template-columns:72px 1fr 26px;gap:6px;align-items:center;font-size:.68rem;color:var(--muted)}.mm-bar i{height:6px;border-radius:9px;background:linear-gradient(90deg,#303331 var(--v),rgba(46,48,47,.1) 0)}.mm-bar b{text-align:right;color:var(--ink)}
+    .mm-notes{grid-column:1/-1;margin:0;padding:0;list-style:none;display:grid;gap:4px}.mm-notes li{position:relative;padding-left:16px;font-size:.74rem;line-height:1.35}.mm-notes li::before{content:"";position:absolute;left:2px;top:.45em;width:7px;height:7px;border-radius:50%;background:#9a9a94}.mm-notes li[data-tone="good"]::before{background:#4f8a66}.mm-notes li[data-tone="warn"]::before{background:#c19a45}
+    .mm-actions,.mm-toggles{display:flex;flex-wrap:wrap;gap:7px}.mm-actions button,.mm-toggles button,.mm-summary-actions button{flex:1 1 auto;border:1px solid rgba(46,48,47,.18);border-radius:13px;background:#fff;color:var(--ink);padding:10px 12px;font:650 .76rem/1 var(--font);cursor:pointer}.mm-actions .primary,.mm-summary-actions .primary{background:#303331;border-color:#303331;color:#fff}.mm-actions button:disabled{opacity:.45;cursor:default}.mm-toggles button[aria-pressed="false"]{background:rgba(255,255,255,.5);color:var(--muted)}
+    .mm-avatar-opts{border-radius:16px;background:rgba(255,255,255,.6)}.mm-avatar-opts summary{padding:10px 12px;font-size:.76rem;font-weight:650;cursor:pointer}.mm-avatar-opts>div{display:grid;gap:8px;padding:0 12px 12px}.mm-avatar-opts>div>div{display:flex;flex-wrap:wrap;gap:6px;align-items:center}.mm-avatar-opts span{width:44px;font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.07em}
+    .mm-swatch{width:24px;height:24px;border-radius:50%;border:2px solid #fff;background:var(--sw);box-shadow:0 0 0 1px rgba(46,48,47,.2);cursor:pointer;padding:0}.mm-swatch[aria-pressed="true"]{box-shadow:0 0 0 2px #303331}
+    .mm-chip{border:1px solid rgba(46,48,47,.16);border-radius:10px;background:#fff;padding:6px 9px;font:600 .7rem/1 var(--font);cursor:pointer}.mm-chip[aria-pressed="true"]{background:#303331;color:#fff}
+    .mm-wardrobe-col{display:grid;grid-template-columns:minmax(0,1fr);gap:12px;min-width:0}
+    .mm-tabs{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px}.mm-tabs button{position:relative;flex:none;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(46,48,47,.14);border-radius:13px;background:rgba(255,255,255,.7);color:var(--ink);padding:9px 12px;font:650 .78rem/1 var(--font);cursor:pointer}.mm-tabs button span{font-size:.64rem;color:var(--muted)}.mm-tabs button[aria-selected="true"]{background:#303331;color:#fff}.mm-tabs button[aria-selected="true"] span{color:#d8d6d0}.mm-tabs button i{width:7px;height:7px;border-radius:50%;background:#4f8a66}
+    .mm-tools{display:flex;gap:8px}.mm-search{flex:1}.mm-search input{width:100%;border:1px solid rgba(46,48,47,.16);border-radius:12px;background:#fff;color:var(--ink);padding:9px 12px;font:inherit;font-size:.82rem}
+    .mm-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));grid-auto-rows:max-content;gap:8px;max-height:min(62vh,640px);overflow:auto;padding:2px;align-content:start}
+    .mm-subhead{grid-column:1/-1;margin:6px 2px 0;font-size:.7rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted)}
+    .mm-card{position:relative;border:1px solid rgba(46,48,47,.1);border-radius:16px;background:#fff;overflow:hidden;transition:transform .18s ease,box-shadow .18s ease}.mm-card:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(60,54,48,.1)}.mm-card.is-worn{border-color:#303331;box-shadow:inset 0 0 0 1px #303331}
+    .mm-card-main{display:grid;width:100%;gap:2px;border:0;background:transparent;color:var(--ink);padding:0 0 9px;text-align:left;cursor:pointer}.mm-thumb{display:block;aspect-ratio:1/1.05;background:#f6f3ee}.mm-thumb svg{width:100%;height:100%;display:block}.mm-name,.mm-meta{padding:0 9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.mm-name{margin-top:6px;font-size:.74rem;font-weight:650}.mm-meta{font-size:.64rem;color:var(--muted)}
+    .mm-chance{position:absolute;left:7px;top:7px;padding:3px 6px;border-radius:8px;background:#fff;font-size:.62rem;font-weight:700;box-shadow:0 1px 4px rgba(0,0,0,.08)}.mm-chance[data-tone="strong"]{color:#2f6b47}.mm-chance[data-tone="good"]{color:#5d6b32}.mm-chance[data-tone="risky"]{color:#8a6a24}.mm-chance[data-tone="clash"]{color:#9a3f35}
+    .mm-info{position:absolute;right:7px;top:7px;width:24px;height:24px;border:1px solid rgba(46,48,47,.16);border-radius:50%;background:rgba(255,255,255,.92);font:700 .68rem/1 var(--font);cursor:pointer}
+    .mm-empty{grid-column:1/-1;margin:0;padding:24px;border:1px dashed rgba(46,48,47,.2);border-radius:16px;text-align:center;color:var(--muted);font-size:.82rem}
+    .mm-summary,.mm-odds{padding:14px;border:1px solid rgba(46,48,47,.1);border-radius:22px;background:rgba(255,255,255,.66)}
+    .mm-summary-head,.mm-odds-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:8px}.mm-summary-head h3,.mm-odds-head h3{margin:0;font-size:1rem}.mm-odds-head span{font-size:.7rem;color:var(--muted)}
+    .mm-worn{list-style:none;margin:0;padding:0;display:grid;gap:8px}.mm-worn li{display:grid;grid-template-columns:52px minmax(0,1fr) auto;gap:10px;align-items:start;padding:8px;border-radius:14px;background:#fff}.mm-mini{display:block;width:52px;height:56px;border-radius:10px;background:#f6f3ee;overflow:hidden}.mm-mini svg{width:100%;height:100%}
+    .mm-worn-copy b{display:block;font-size:.78rem}.mm-worn-copy small{display:block;color:var(--muted);font-size:.66rem;margin:1px 0 6px}.mm-swatches{display:flex;flex-wrap:wrap;gap:5px;align-items:center}.mm-swatches .mm-swatch{width:18px;height:18px}.mm-swatch-reset{border:0;background:transparent;color:var(--muted);font:600 .64rem var(--font);cursor:pointer;text-decoration:underline}
+    .mm-worn-actions{display:flex;flex-direction:column;gap:5px;align-items:flex-end}.mm-worn-actions button,.mm-worn-actions a{border:1px solid rgba(46,48,47,.16);border-radius:9px;background:#fff;color:var(--ink);padding:5px 8px;font:650 .66rem/1 var(--font);text-decoration:none;cursor:pointer;white-space:nowrap}.mm-worn-actions button[aria-pressed="true"]{background:#303331;color:#fff}
+    .mm-fine{margin:10px 0 0;color:var(--muted);font-size:.68rem}.mm-summary-actions{display:flex;gap:8px;margin-top:10px}
+    .mm-odds-scroll{overflow-x:auto}.mm-odds table{width:100%;border-collapse:collapse;font-size:.74rem}.mm-odds th,.mm-odds td{padding:7px 6px;border-bottom:1px solid rgba(46,48,47,.08);text-align:right;white-space:nowrap}.mm-odds th[scope="row"],.mm-odds thead th:first-child{text-align:left}.mm-odds thead th{font-size:.62rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:650}.mm-odds td button{border:1px solid rgba(46,48,47,.16);border-radius:9px;background:#fff;padding:5px 8px;font:650 .64rem/1 var(--font);cursor:pointer}
+    .card-action.try-on{grid-column:1/-1;background:#303331!important;color:#fff!important}.formula-actions button[data-try-formula],.lookboard-actions .board-try{background:#303331;color:#fff;border-color:#303331}.lookboard-actions{grid-template-columns:1fr 1fr}.lookboard-actions .board-try{grid-column:1/-1}
+    .saved-open{border:0;background:transparent;color:#fff;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px;padding:0}
+    .piece-visual{min-height:390px;background:#f4f1eb}.piece-visual svg{width:100%;height:100%;min-height:390px;display:block}
+    @media(max-width:980px){.mm-shell{grid-template-columns:minmax(0,1fr)}.mm-stage-col{min-width:0}.mm-stage-col{position:relative;top:auto}.mm-stage{height:520px}.mm-grid{max-height:none}}
+    @media(max-width:620px){.mm-tools{flex-wrap:wrap}.mm-tools label{flex:1 1 100%}.mm-tools select{width:100%}.mm-stage{height:460px;min-height:0}.mm-bars{grid-template-columns:1fr}.mm-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mm-worn li{grid-template-columns:44px minmax(0,1fr)}.mm-worn-actions{grid-column:1/-1;flex-direction:row;justify-content:flex-end}.piece-visual,.piece-visual svg{min-height:260px}}
   </style>
 </head>
 <body>
@@ -94,7 +136,7 @@
   <main class="shell">
     <header class="topbar" id="topbar">
       <div class="brand">Fashion Inspo Libraries</div>
-      <nav class="view-nav" aria-label="Choose experience"><button class="view-tab" type="button" data-view="library" aria-pressed="true">Lookboards</button><button class="view-tab" type="button" data-view="studio" aria-pressed="false">Mix &amp; Match</button></nav>
+      <nav class="view-nav" aria-label="Choose experience"><button class="view-tab" type="button" data-view="studio" aria-pressed="true">Mix &amp; Match</button><button class="view-tab" type="button" data-view="library" aria-pressed="false">Lookboards</button></nav>
       <div class="profile"><span id="userMetrics">Personal fit</span><div class="currency-wrap"><select class="currency-select" id="currencySelect" aria-label="Display currency"><option>USD</option><option>AMD</option><option>IDR</option><option>MYR</option></select><span class="rate-status" id="rateStatus">Rates…</span></div><button class="sync-pill" id="syncTrigger" type="button" data-status="starting" aria-haspopup="dialog"><span class="sync-dot" aria-hidden="true"></span><span id="syncLabel">Loading library…</span></button><button class="profile-action" id="fitSettings" type="button">Fit settings</button><button class="saved-pill" id="savedTrigger" type="button">Saved <span id="savedCount">0</span></button></div>
     </header>
 
@@ -102,13 +144,14 @@
       <div><p class="eyebrow">A personal wardrobe prototype</p><h1>Your wardrobe, calibrated.</h1></div>
       <div>
         <p class="dek" id="introDek">Pinterest-led outfit formulas organized as separate brand libraries, with seasonal, old-money and casual ways to explore.</p>
+        <div class="intro-cta"><button type="button" class="cta-primary" data-view-go="studio">Start mixing</button><button type="button" class="cta-secondary" data-view-go="library">Browse lookboards</button></div>
         <div class="fit-brief">
           <div><b id="fitTop">Personalized</b><span>top starting point</span></div><div><b id="fitTrouser">Personalized</b><span>trouser starting point</span></div><div><b id="fitHem">Personalized</b><span>length direction</span></div>
         </div>
       </div>
     </section>
 
-    <div class="library-view" id="libraryView">
+    <div class="library-view" id="libraryView" hidden>
     <section class="editorial" aria-labelledby="editorialTitle">
       <div class="editorial-head"><div><p class="eyebrow">Model + clickable flat lay</p><h2 id="editorialTitle">Shop the whole composition.</h2></div><p>Every item beside the model opens its brand, product name, converted price and retailer route. These curated boards use one brand per look.</p></div>
       <div class="lookboard-grid" id="lookboardGrid"></div>
@@ -159,9 +202,31 @@
     </section>
     </div>
 
-    <section class="studio" id="studioView" hidden aria-labelledby="studioTitle">
-      <div class="studio-head"><div><p class="eyebrow">Interactive styling preview</p><h2 class="studio-title" id="studioTitle">Build it, layer by layer.</h2></div><div><p>Start with the boxer-only base model, then mix outerwear, tops, trousers, shoes and accessories across every catalogue. Change the display currency from the top bar.</p></div></div>
-      <div class="studio-grid"><div class="tryon-stage" id="tryonStage"><img src="assets/tryon-base-model.png" alt="Full-body adult male base model wearing charcoal boxer briefs"><img class="garment-layer layer-outerwear" id="layerOuterwear" alt="" hidden><img class="garment-layer layer-top" id="layerTop" alt="" hidden><img class="garment-layer layer-bottom" id="layerBottom" alt="" hidden><img class="garment-layer layer-shoes" id="layerShoes" alt="" hidden><img class="garment-layer layer-accessory" id="layerAccessory" alt="" hidden><div class="stage-note"><span><strong>On-body creator</strong><br>Aligned avatar states · visual styling preview</span><span id="selectedCount">0 / 5 selected</span></div></div><div class="wardrobe-panel" id="wardrobePanel"></div></div>
+    <section class="studio" id="studioView" aria-labelledby="studioTitle">
+      <div class="studio-head"><div><p class="eyebrow">Flagship · Mix &amp; Match</p><h2 class="studio-title" id="studioTitle">Dress it, piece by piece.</h2></div><div><p>Every item from every catalogue is drawn on its own, so anything can go with anything. Stay inside one brand or cross over, and the match chance updates with each piece. <span id="studioCount"></span></p></div></div>
+      <div class="mm-shell">
+        <div class="mm-stage-col">
+          <div class="mm-stage-card">
+            <div class="mm-toolbar">
+              <div class="mm-seg" role="group" aria-label="Mixing mode"><button type="button" data-mm-mode="crossover" aria-pressed="true">Crossover</button><button type="button" data-mm-mode="same-brand" aria-pressed="false">Same brand</button></div>
+              <select id="mmBrand" class="mm-select" aria-label="Brand for same-brand mode" hidden></select>
+              <select id="mmSeason" class="mm-select" aria-label="Season"><option value="all">All seasons</option><option value="spring">Spring</option><option value="summer">Summer</option><option value="fall">Fall</option><option value="winter">Winter</option></select>
+            </div>
+            <div class="mm-stage" id="mmStage"></div>
+            <div class="mm-score" id="mmScore" aria-live="polite"></div>
+            <div class="mm-actions"><button type="button" id="mmShuffle" class="primary">Shuffle</button><button type="button" id="mmComplete">Complete the look</button><button type="button" id="mmUndo">Undo</button><button type="button" id="mmReset">Undress</button></div>
+            <div class="mm-toggles"><button type="button" id="mmTuck" aria-pressed="true">Top tucked in</button><button type="button" id="mmOpen" aria-pressed="true">Jacket open</button></div>
+            <details class="mm-avatar-opts"><summary>Avatar</summary><div id="mmAvatarOpts"></div></details>
+          </div>
+        </div>
+        <div class="mm-wardrobe-col">
+          <div class="mm-tabs" role="tablist" id="mmTabs" aria-label="Wardrobe sections"></div>
+          <div class="mm-tools"><label class="mm-search"><span class="sr-only">Search pieces</span><input id="mmSearch" type="search" placeholder="Search pieces, colours, brands…" autocomplete="off"></label><label><span class="sr-only">Sort pieces</span><select id="mmSort" class="mm-select"><option value="match">Best match first</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option><option value="brand">Brand</option></select></label></div>
+          <div class="mm-grid" id="mmGrid"></div>
+          <div class="mm-summary" id="mmSummary"></div>
+          <div class="mm-odds" id="mmOdds"></div>
+        </div>
+      </div>
     </section>
 
     <section class="saved-panel" id="savedPanel" hidden aria-live="polite">
@@ -177,6 +242,10 @@
     </dialog>
     <dialog class="model-dialog" id="modelDialog" aria-labelledby="dialogTitle">
       <div class="dialog-inner"><button class="dialog-close" id="dialogClose" type="button" aria-label="Close full-body view">×</button><img id="dialogImage" alt=""><div class="dialog-caption"><strong id="dialogTitle"></strong><span>AI styling visualization · head-to-toe view</span></div></div>
+    </dialog>
+    <dialog class="product-dialog piece-dialog" id="pieceDialog" aria-labelledby="pieceName">
+      <button class="product-x" id="pieceClose" type="button" aria-label="Close piece details">×</button>
+      <div class="product-modal"><div class="piece-visual" id="pieceVisual"></div><div class="product-info"><small id="pieceBrand"></small><h3 id="pieceName"></h3><div class="product-price" id="piecePrice"></div><dl class="product-facts" id="pieceFacts"></dl><div class="product-actions"><button id="pieceWear" type="button">Wear it</button><a id="pieceShop" href="#" target="_blank" rel="noreferrer">Shop brand ↗</a></div></div></div>
     </dialog>
     <dialog class="library-dialog" id="libraryDialog" aria-labelledby="libraryDialogTitle">
       <button class="product-x" id="libraryDialogClose" type="button" aria-label="Close catalogue updates">×</button>
@@ -209,6 +278,9 @@
   <script src="data/seed.js"></script>
   <script src="app/store.js"></script>
   <script src="app/sync.js"></script>
+  <script src="app/wardrobe.js"></script>
+  <script src="app/avatar.js"></script>
+  <script src="app/studio.js"></script>
   <script src="app/app.js"></script>
 </body>
 </html>

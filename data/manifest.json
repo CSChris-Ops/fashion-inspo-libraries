@@ -1,6 +1,6 @@
 {
   "schema_version": 2,
-  "content_hash": "9e4dcd77eaff6c0a",
+  "content_hash": "3c29485ae8b90aaf",
   "generated_at": "2026-09-21T00:00:00+04:00",
   "sync": {
     "poll_seconds": 300
@@ -58,6 +58,11 @@
   "lookboards": {
     "path": "data/lookboards.json",
     "hash": "7d74beaecd63f193"
+  },
+  "wardrobe": {
+    "path": "data/wardrobe.json",
+    "hash": "581084dbc3375acc",
+    "pieces": 282
   },
   "assets": [
     "assets/fall-ai-model.jpg",
