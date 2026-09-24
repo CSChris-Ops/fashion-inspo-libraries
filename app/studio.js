@@ -85,8 +85,13 @@
         <div class="mm-score-copy"><strong>${esc(r.label)}</strong><span>${brandNote}</span><em>Match chance</em></div>
         <div class="mm-bars">${bar('Colour',r.parts.colour)}${bar('Formality',r.parts.formality)}${bar('Season',r.parts.season)}${bar('Proportion',r.parts.proportion)}</div>
         <ul class="mm-notes">${r.notes.slice(0,4).map(n=>`<li data-tone="${n.tone}">${esc(n.text)}</li>`).join('')}</ul>`;
-      $('#mmTuck').setAttribute('aria-pressed',String(state.tuck));$('#mmTuck').textContent=state.tuck?'Top tucked in':'Top untucked';
-      $('#mmOpen').setAttribute('aria-pressed',String(state.open));$('#mmOpen').textContent=state.open?'Jacket open':'Jacket closed';
+      const tuckable=slots.top&&!['sweatshirt','sweater','halfzip','turtleneck','mockneck'].includes(slots.top.type);
+      const tuckBtn=$('#mmTuck'),openBtn=$('#mmOpen');
+      tuckBtn.setAttribute('aria-pressed',String(state.tuck));tuckBtn.textContent=state.tuck?'Top tucked in':'Top untucked';
+      tuckBtn.disabled=!tuckable;tuckBtn.title=tuckable?'':slots.top?'Knitwear and sweatshirts are worn out':'Wear a shirt, tee or polo to tuck it in';
+      openBtn.setAttribute('aria-pressed',String(state.open));openBtn.textContent=state.open?'Jacket open':'Jacket closed';
+      openBtn.disabled=!slots.outerwear;openBtn.title=slots.outerwear?'':'Wear a jacket or coat first';
+      stage.insertAdjacentHTML('beforeend',`<div class="mm-stage-badge" data-tone="${r.tone}"${r.score?'':' hidden'}><b>${r.score}%</b><span>${esc(r.label)}</span></div>`);
       $('#mmUndo').disabled=!state.history.length;
     }
 
@@ -98,18 +103,19 @@
     function renderTabs(){
       $('#mmTabs').innerHTML=Object.keys(TAB_SLOTS).map(tab=>{
         const n=candidates(tab).length,worn=TAB_SLOTS[tab].filter(s=>state.ids[s]).length;
-        return`<button type="button" role="tab" data-mm-tab="${tab}" aria-selected="${state.tab===tab}">${TAB_LABELS[tab]}<span>${n}</span>${worn?'<i aria-label="piece equipped"></i>':''}</button>`;
+        return`<button type="button" role="tab" data-mm-tab="${tab}" aria-selected="${state.tab===tab}" tabindex="${state.tab===tab?0:-1}">${TAB_LABELS[tab]}<span>${n}</span>${worn?'<i aria-label="piece equipped"></i>':''}</button>`;
       }).join('');
     }
     function renderGrid(){
       if(!w)return;
       renderTabs();
       const slots=slotsNow();
+      const dressed=Object.values(slots).some(p=>!['watch','eyewear'].includes(p.slot));
       let list=candidates(state.tab).map(p=>{
         const trial={...slots,[p.slot]:p};
         return{p,chance:scoreOf(trial).score,worn:state.ids[p.slot]===p.id};
       });
-      const sorters={match:(a,b)=>b.chance-a.chance,low:(a,b)=>usdOf(a.p)-usdOf(b.p),high:(a,b)=>usdOf(b.p)-usdOf(a.p),brand:(a,b)=>a.p.brandLabel.localeCompare(b.p.brandLabel)||a.p.name.localeCompare(b.p.name)};
+      const sorters={match:(a,b)=>b.chance-a.chance||a.p.brandLabel.localeCompare(b.p.brandLabel)||a.p.name.localeCompare(b.p.name),low:(a,b)=>usdOf(a.p)-usdOf(b.p),high:(a,b)=>usdOf(b.p)-usdOf(a.p),brand:(a,b)=>a.p.brandLabel.localeCompare(b.p.brandLabel)||a.p.name.localeCompare(b.p.name)};
       list.sort(sorters[state.sort]||sorters.match);
       list.sort((a,b)=>b.worn-a.worn);
       const grid=$('#mmGrid');
@@ -117,7 +123,7 @@
       let lastSlot=null;
       grid.innerHTML=list.map(({p,chance,worn})=>{
         const head=state.tab==='accessories'&&p.slot!==lastSlot?`<h4 class="mm-subhead">${W.SLOT_LABELS[p.slot]}</h4>`:'';lastSlot=p.slot;
-        return`${head}<div class="mm-card${worn?' is-worn':''}"><button type="button" class="mm-card-main" data-mm-equip="${esc(p.id)}" aria-pressed="${worn}" aria-label="${worn?'Take off':'Wear'} ${esc(p.name)}, ${esc(p.brandLabel)}, match chance ${chance}%"><span class="mm-thumb">${thumbOf(p)}</span><span class="mm-name">${esc(p.name)}</span><span class="mm-meta">${esc(p.brandLabel)} · ${esc(priceLabel(p))}</span></button><span class="mm-chance" data-tone="${toneOf(chance)}" title="Match chance if you wear this">${chance}%</span><button type="button" class="mm-info" data-mm-info="${esc(p.id)}" aria-label="Details for ${esc(p.name)}">i</button></div>`;
+        return`${head}<div class="mm-card${worn?' is-worn':''}"><button type="button" class="mm-card-main" data-mm-equip="${esc(p.id)}" aria-pressed="${worn}" aria-label="${worn?'Take off':'Wear'} ${esc(p.name)}, ${esc(p.brandLabel)}, match chance ${chance}%"><span class="mm-thumb">${thumbOf(p)}</span><span class="mm-name">${esc(p.name)}</span><span class="mm-meta">${esc(p.brandLabel)} · ${esc(priceLabel(p))}</span></button>${dressed||worn?`<span class="mm-chance" data-tone="${toneOf(chance)}" title="Match chance if you wear this">${chance}%</span>`:''}<button type="button" class="mm-info" data-mm-info="${esc(p.id)}" aria-label="Details for ${esc(p.name)}">i</button></div>`;
       }).join('');
       if(state.tab==='accessories'){const order=['belt','watch','bag','eyewear'];void order}
     }
@@ -152,7 +158,7 @@
         const pct=v=>`${Math.round(v*100)}%`;
         const row=(label,g,brand)=>`<tr><th scope="row">${esc(label)}</th><td>${compact(g.combinations)}</td><td>${pct(g.good)}</td><td>${pct(g.strong)}</td><td>${g.average}</td><td>${g.best?`<button type="button" data-mm-best="${esc(brand)}">Try best</button>`:''}</td></tr>`;
         box.innerHTML=`<div class="mm-odds-head"><h3>Match odds</h3><span>${state.season==='all'?'All seasons':esc(state.season)} · ${d.samplesPerGroup.toLocaleString('en-US')} random outfits per group</span></div>
-          <div class="mm-odds-scroll"><table><thead><tr><th scope="col">Mix</th><th scope="col">Outfits possible</th><th scope="col">Good or better</th><th scope="col">Strong</th><th scope="col">Avg</th><th></th></tr></thead><tbody>${d.brands.map(b=>row(`${b.label} only`,b,b.brand)).join('')}${row('Crossover (2+ brands)',d.crossover,'__crossover')}</tbody></table></div>
+          <div class="mm-odds-scroll"><table><thead><tr><th scope="col">Mix</th><th scope="col">Outfits possible</th><th scope="col">Good or better</th><th scope="col">Strong</th><th scope="col">Avg</th><th scope="col"><span class="sr-only">Load outfit</span></th></tr></thead><tbody>${d.brands.map(b=>row(`${b.label} only`,b,b.brand)).join('')}${row('Crossover (2+ brands)',d.crossover,'__crossover')}</tbody></table></div>
           <p class="mm-fine">“Good” means a match chance of 65% or more, “Strong” 80% or more, using the same rules as the live score. Outfits counted as top × bottoms × shoes × (outerwear or none).</p>`;
         box._data=d;
       }
@@ -186,7 +192,7 @@
     // ------------------------------------------------------------ avatar options
     function renderAvatarOpts(){
       const a=state.avatar;
-      const sw=(key,list)=>list.map((c,i)=>`<button type="button" class="mm-swatch" data-mm-avatar="${key}" data-value="${i}" style="--sw:${c}" aria-pressed="${a[key]===i}" aria-label="${key} ${i+1}"></button>`).join('');
+      const sw=(key,list)=>list.map((c,i)=>`<button type="button" class="mm-swatch" data-mm-avatar="${key}" data-value="${i}" style="--sw:${c}" aria-pressed="${a[key]===i}" aria-label="${key==='skin'?'Skin tone':'Hair colour'} ${i+1} of ${list.length}"></button>`).join('');
       const builds=[['auto','From fit settings'],['0.94','Slim'],['1.02','Regular'],['1.1','Broad']];
       $('#mmAvatarOpts').innerHTML=`<div><span>Skin</span>${sw('skin',A.SKINS)}</div><div><span>Hair</span>${sw('hair',A.HAIRS)}</div>
         <div><span>Style</span>${A.HAIR_STYLES.map(s=>`<button type="button" class="mm-chip" data-mm-avatar="hairStyle" data-value="${s}" aria-pressed="${a.hairStyle===s}">${s==='crop'?'Crop':s==='side'?'Side part':'Wave'}</button>`).join('')}</div>
@@ -200,6 +206,20 @@
       sel.innerHTML=brandsList().map(([id,label])=>`<option value="${esc(id)}"${id===activeBrand()?' selected':''}>${esc(label)}</option>`).join('');
       $('#mmSeason').value=state.season;$('#mmSort').value=state.sort;
       $('#studioCount').textContent=w?`${w.pieces.length} pieces from ${brandsList().length} catalogues`:'';
+    }
+
+    // In same-brand mode, pieces from other brands (even locked ones) are not kept.
+    const brandName=id=>(brandsList().find(([b])=>b===id)||[])[1]||'';
+    function brandSafeKeep(slotList){
+      const worn=slotsNow(),brand=state.mode==='same-brand'?activeBrand():null;
+      const locked={},keep=[];let dropped=0;
+      const accessories=['watch','bag','eyewear'];
+      for(const s of new Set([...slotList,...accessories])){
+        const p=worn[s];if(!p)continue;
+        if(brand&&p.brand!==brand){dropped++;state.locks.delete(s);continue}
+        if(slotList.includes(s))locked[s]=p;keep.push(s);
+      }
+      return{locked,keep,dropped};
     }
 
     // ------------------------------------------------------------ events
@@ -218,19 +238,27 @@
       if(d.mmBest){const g=d.mmBest==='__crossover'?$('#mmOdds')._data.crossover:$('#mmOdds')._data.brands.find(b=>b.brand===d.mmBest);if(g&&g.best){const slots={};g.best.pieces.forEach(id=>{const p=w.resolve(id);if(p)slots[p.slot]=p});applySlots(slots,{keep:['watch','bag','eyewear']});env.toast(`Loaded the best sampled ${d.mmBest==='__crossover'?'crossover':g.label} outfit · ${g.best.score}%.`)}return}
       switch(t.id){
         case'mmShuffle':{
-          const locked={};for(const s of state.locks){const p=slotsNow()[s];if(p)locked[s]=p}
+          const {locked,keep,dropped}=brandSafeKeep([...state.locks]);
           const r=W.shuffle(w,{locked,mode:state.mode,brand:activeBrand(),season:state.season==='all'?null:state.season,ctx:ctx()});
-          if(r){applySlots(r.slots,{keep:[...state.locks,'watch','bag','eyewear']});env.toast(`${r.label} · ${r.score}% match chance${r.brands.length>1?` · ${r.brands.length} brands`:''}.`,{timeout:3200})}
+          if(r){applySlots(r.slots,{keep});env.toast(`${r.label} · ${r.score}% match chance${r.brands.length>1?` · ${r.brands.length} brands`:''}.${dropped?` Swapped ${dropped} piece${dropped>1?'s':''} from other brands to keep it ${brandName(activeBrand())}-only.`:''}`,{timeout:3600})}
           break}
         case'mmComplete':{
-          const current=slotsNow();
           const sig=W.SLOTS.map(s=>state.ids[s]||'').join('|');
+          // Pressing again right after a completion cycles through alternatives built
+          // from the same starting pieces, instead of "completing" the finished outfit.
           if(!state.suggestions||state.suggestions.sig!==sig){
-            const list=W.suggest(w,{locked:current,mode:state.mode,brand:activeBrand(),season:state.season==='all'?null:state.season,count:6,ctx:ctx()});
-            state.suggestions={sig:null,list};state.suggestIndex=0;
+            const {locked:base,dropped}=brandSafeKeep(Object.keys(slotsNow()));
+            if(dropped)env.toast(`Same brand: ${dropped} piece${dropped>1?'s':''} from other brands will be replaced.`,{timeout:2600});
+            const list=W.suggest(w,{locked:base,mode:state.mode,brand:activeBrand(),season:state.season==='all'?null:state.season,count:6,ctx:ctx()});
+            state.suggestions={sig:null,list,baseSlots:Object.keys(base)};state.suggestIndex=0;
           }else state.suggestIndex=(state.suggestIndex+1)%state.suggestions.list.length;
           const pickR=state.suggestions.list[state.suggestIndex];
-          if(pickR){applySlots(pickR.slots,{keep:Object.keys(current)});state.suggestions.sig=W.SLOTS.map(s=>state.ids[s]||'').join('|');env.toast(`Option ${state.suggestIndex+1} of ${state.suggestions.list.length} · ${pickR.score}% match chance. Press again for another.`,{timeout:3200})}
+          if(pickR){
+            const {list,baseSlots}=state.suggestions,idx=state.suggestIndex;
+            applySlots(pickR.slots,{keep:baseSlots});
+            state.suggestions={sig:W.SLOTS.map(s=>state.ids[s]||'').join('|'),list,baseSlots};state.suggestIndex=idx;
+            env.toast(list.length>1?`Option ${idx+1} of ${list.length} · ${pickR.score}% match chance. Press again for another.`:`${pickR.score}% match chance.`,{timeout:3200});
+          }else env.toast('No combination fits these filters — try another season or Crossover.');
           break}
         case'mmUndo':{const prev=state.history.pop();if(prev){Object.assign(state,prev);state.changed='all';persist();renderStage();renderGrid();renderSummary();emit()}break}
         case'mmReset':pushHistory();state.ids={};state.locks.clear();state.changed='all';afterChange();break;
@@ -243,6 +271,12 @@
           (navigator.clipboard?navigator.clipboard.writeText(url):Promise.reject()).then(()=>env.toast('Outfit link copied.')).catch(()=>{prompt('Copy this outfit link:',url)});
           break}
       }
+    });
+    $('#mmTabs').addEventListener('keydown',e=>{
+      if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;
+      const tabs=Object.keys(TAB_SLOTS),i=tabs.indexOf(state.tab);
+      const next=e.key==='Home'?0:e.key==='End'?tabs.length-1:(i+(e.key==='ArrowRight'?1:-1)+tabs.length)%tabs.length;
+      e.preventDefault();state.tab=tabs[next];persist();renderGrid();$(`[data-mm-tab="${tabs[next]}"]`).focus();
     });
     $('#mmSearch').addEventListener('input',e=>{clearTimeout(mount._t);mount._t=setTimeout(()=>{state.query=e.target.value.trim().toLowerCase();renderGrid()},120)});
     $('#mmSort').addEventListener('change',e=>{state.sort=e.target.value;persist();renderGrid()});
