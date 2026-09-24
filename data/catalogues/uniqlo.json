@@ -1,0 +1,865 @@
+{
+  "schema_version": 2,
+  "id": "uniqlo",
+  "label": "UNIQLO",
+  "order": 4,
+  "market": "US",
+  "currency": "USD",
+  "home_url": "https://www.uniqlo.com/us/en/men",
+  "logo": {
+    "src": "assets/uniqlo-logo-clean.png",
+    "class": "uniqlo-logo"
+  },
+  "tones": [
+    "#e9e5dc",
+    "#63768a",
+    "#53604e"
+  ],
+  "try_on_model": "tryon-uniqlo.png",
+  "updated_at": "2026-09-21T00:00:00+04:00",
+  "seasonal": [
+    {
+      "id": "uniqlo-spring",
+      "season": "spring",
+      "title": "LifeWear spring utility",
+      "image": "assets/uniqlo-season-spring.jpg",
+      "range": "8–18°C",
+      "occasion": "Office · errands · weekend",
+      "currency": "USD",
+      "full": 209.6,
+      "lite": 129.7,
+      "items": [
+        {
+          "name": "Utility jacket",
+          "price": 79.9,
+          "url": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers",
+          "note": "Use sage or stone and keep the hem near the hip.",
+          "optional": true
+        },
+        {
+          "name": "Striped crew-neck T-shirt",
+          "price": 29.9,
+          "url": "https://www.uniqlo.com/us/en/men/t-shirts",
+          "note": "A fine navy stripe supplies quiet structure.",
+          "optional": false
+        },
+        {
+          "name": "Pleated wide pants",
+          "price": 59.9,
+          "url": "https://www.uniqlo.com/us/en/men/bottoms/casual-pants",
+          "note": "Hem with little to no pooling.",
+          "optional": false
+        },
+        {
+          "name": "Canvas sneakers",
+          "price": 39.9,
+          "url": "https://www.uniqlo.com/us/en/men",
+          "note": "Choose the cleanest neutral pair available.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "A short utility layer balances the wider trouser. Remove it for a <strong>$129.70</strong> warm-day set."
+    },
+    {
+      "id": "uniqlo-summer",
+      "season": "summer",
+      "title": "LifeWear linen air",
+      "image": "assets/uniqlo-season-summer.jpg",
+      "range": "24–35°C",
+      "occasion": "Travel · terrace · casual Friday",
+      "currency": "USD",
+      "full": 169.6,
+      "lite": 149.7,
+      "items": [
+        {
+          "name": "AIRism Cotton T-shirt",
+          "price": 19.9,
+          "url": "https://www.uniqlo.com/us/en/men/t-shirts",
+          "note": "White creates a cool base layer.",
+          "optional": true
+        },
+        {
+          "name": "Premium linen shirt",
+          "price": 49.9,
+          "url": "https://www.uniqlo.com/us/en/men/shirts-and-polos",
+          "note": "Pale blue gives the tonal colour cue.",
+          "optional": false
+        },
+        {
+          "name": "Linen-blend relaxed pants",
+          "price": 59.9,
+          "url": "https://www.uniqlo.com/us/en/men/bottoms/casual-pants",
+          "note": "Use ecru or natural stone.",
+          "optional": false
+        },
+        {
+          "name": "Minimal sandals",
+          "price": 39.9,
+          "url": "https://www.uniqlo.com/us/en/men",
+          "note": "Keep the sole low and the upper dark.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Mix blue with ecru, not bright contrast. In peak heat, skip the inner tee for a <strong>$149.70</strong> basket."
+    },
+    {
+      "id": "uniqlo-fall",
+      "season": "fall",
+      "title": "Lambswool campus refinement",
+      "image": "assets/uniqlo-season-fall.jpg",
+      "range": "8–20°C",
+      "occasion": "Office · library · dinner",
+      "currency": "USD",
+      "full": 199.6,
+      "lite": 139.7,
+      "items": [
+        {
+          "name": "Lambswool V-neck cardigan",
+          "price": 59.9,
+          "url": "https://www.uniqlo.com/us/en/men/sweaters",
+          "note": "Navy reads polished without looking formal.",
+          "optional": true
+        },
+        {
+          "name": "Oxford slim-fit shirt",
+          "price": 39.9,
+          "url": "https://www.uniqlo.com/us/en/men/shirts-and-polos",
+          "note": "Leave the top button open.",
+          "optional": false
+        },
+        {
+          "name": "Corduroy pants",
+          "price": 49.9,
+          "url": "https://www.uniqlo.com/us/en/men/bottoms",
+          "note": "Olive or brown adds seasonal depth.",
+          "optional": false
+        },
+        {
+          "name": "Suede-look slip-ons",
+          "price": 49.9,
+          "url": "https://www.uniqlo.com/us/en/men",
+          "note": "Keep the shoe shape narrow and simple.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Button only the middle of the cardigan and show the shirt cuff. Without it, the base is <strong>$139.70</strong>."
+    },
+    {
+      "id": "uniqlo-winter",
+      "season": "winter",
+      "title": "Technical winter monochrome",
+      "image": "assets/uniqlo-season-winter.jpg",
+      "range": "−5–8°C",
+      "occasion": "Commute · travel · daily cold",
+      "currency": "USD",
+      "full": 339.6,
+      "lite": 339.6,
+      "items": [
+        {
+          "name": "Seamless Down Parka",
+          "price": 179.9,
+          "url": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers",
+          "note": "Charcoal keeps the technical volume calm.",
+          "optional": false
+        },
+        {
+          "name": "HEATTECH turtleneck",
+          "price": 29.9,
+          "url": "https://www.uniqlo.com/us/en/men/heattech",
+          "note": "Black makes the collar disappear into the jacket.",
+          "optional": false
+        },
+        {
+          "name": "Smart Pants",
+          "price": 59.9,
+          "url": "https://www.uniqlo.com/us/en/men/bottoms/dress-pants",
+          "note": "Grey restores a tailored vertical line.",
+          "optional": false
+        },
+        {
+          "name": "Weather-ready ankle boots",
+          "price": 69.9,
+          "url": "https://www.uniqlo.com/us/en/men",
+          "note": "Use a simple black sole without contrast hardware.",
+          "optional": false
+        }
+      ],
+      "advice_title": "Old-money cue",
+      "advice": "Keep every visible colour between black and mid-grey. The full thermal set is the recommended winter version."
+    }
+  ],
+  "formulas": [
+    {
+      "id": "uniqlo-utility-blouson-balance",
+      "title": "Utility blouson balance",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-utility-blouson.jpg",
+      "rule": "The short blue utility layer balances the straight beige chino without extra bulk.",
+      "pieces": [
+        "utility short blouson",
+        "Oxford slim-fit shirt",
+        "slim-fit chino pants",
+        "canvas sneakers"
+      ],
+      "basket": {
+        "amount": 209.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-airsense-office-ease",
+      "title": "AirSense office ease",
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-airsense-office.jpg",
+      "rule": "Pair performance tailoring with a polo and ankle-length trouser for a light office set.",
+      "pieces": [
+        "AirSense blazer",
+        "AIRism cotton pique polo",
+        "Smart Ankle Pants",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 219.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-airism-wide-minimal",
+      "title": "AIRism wide minimal",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-airism-wide.jpg",
+      "rule": "A slightly oversized white tee works when the pleated trouser is clean and long.",
+      "pieces": [
+        "AIRism cotton oversized crew-neck T-shirt",
+        "Pleated Wide Pants",
+        "sport sneakers"
+      ],
+      "basket": {
+        "amount": 129.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-jersey-overshirt-denim",
+      "title": "Jersey overshirt denim",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-jersey-overshirt.jpg",
+      "rule": "Use olive against dark indigo and keep the inner tee soft ecru.",
+      "pieces": [
+        "jersey overshirt",
+        "U crew-neck T-shirt",
+        "wide-fit jeans",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 179.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-open-collar-linen-air",
+      "title": "Open-collar linen air",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-linen-open-collar.jpg",
+      "rule": "Pale blue and ecru give the relaxed linen set a precise tonal direction.",
+      "pieces": [
+        "linen-blend open-collar shirt",
+        "linen-blend relaxed pants",
+        "minimal sandals"
+      ],
+      "basket": {
+        "amount": 149.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-merino-polo-smart",
+      "title": "Merino polo smart",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/uniqlo-merino-polo.jpg",
+      "rule": "A navy merino polo can replace both shirt and jacket when the trouser is pressed.",
+      "pieces": [
+        "Merino Polo Sweater",
+        "Smart Pants",
+        "leather-look loafers"
+      ],
+      "basket": {
+        "amount": 159.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-blocktech-city-shell",
+      "title": "BLOCKTECH city shell",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-blocktech.jpg",
+      "rule": "Keep the weatherproof shell stone and the layers below it matte and tonal.",
+      "pieces": [
+        "BLOCKTECH Parka",
+        "Merino Sweater",
+        "Pleated Wide Pants",
+        "ankle boots"
+      ],
+      "basket": {
+        "amount": 259.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-ultra-light-down-column",
+      "title": "Ultra Light Down column",
+      "seasons": [
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-ultra-light-down.jpg",
+      "rule": "Black and charcoal reduce the visual volume of the insulated outer layer.",
+      "pieces": [
+        "Ultra Light Down Jacket",
+        "HEATTECH turtleneck",
+        "Smart Pants",
+        "weather-ready boots"
+      ],
+      "basket": {
+        "amount": 339.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-pufftech-cord-layers",
+      "title": "PUFFTECH cord layers",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-pufftech-vest.jpg",
+      "rule": "The vest stays compact over a flannel shirt while brown corduroy adds warmth.",
+      "pieces": [
+        "PUFFTECH Vest",
+        "flannel shirt",
+        "corduroy pants",
+        "ankle boots"
+      ],
+      "basket": {
+        "amount": 229.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-broadcloth-pleats",
+      "title": "Broadcloth + pleats",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-broadcloth-pleats.jpg",
+      "rule": "Tuck the pale broadcloth fully and use charcoal pleats with a minimal break.",
+      "pieces": [
+        "broadcloth shirt",
+        "Pleated Wide Pants",
+        "leather-look derby shoes"
+      ],
+      "basket": {
+        "amount": 169.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-u-tee-selvedge",
+      "title": "U tee + selvedge",
+      "seasons": [
+        "spring",
+        "summer",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-u-selvedge.jpg",
+      "rule": "The clean white tee and dark selvedge denim are strongest without extra accessories.",
+      "pieces": [
+        "U crew-neck T-shirt",
+        "selvedge regular-fit jeans",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 114.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-lambswool-cardigan-chino",
+      "title": "Lambswool cardigan chino",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-lambswool-cardigan.jpg",
+      "rule": "Navy, white and olive form a quiet campus palette with no loud contrast.",
+      "pieces": [
+        "Lambswool V-neck Cardigan",
+        "Oxford shirt",
+        "slim-fit chino pants",
+        "slip-on shoes"
+      ],
+      "basket": {
+        "amount": 199.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-3d-knit-mock-neck",
+      "title": "3D knit mock-neck",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/uniqlo-mockneck-pleats.jpg",
+      "rule": "Keep the oatmeal mock neck fitted through the shoulder and the trouser fuller below.",
+      "pieces": [
+        "3D Knit Mock Neck Sweater",
+        "Pleated Wide Pants",
+        "ankle boots"
+      ],
+      "basket": {
+        "amount": 179.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-airism-polo-shorts",
+      "title": "AIRism polo shorts",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-polo-shorts.jpg",
+      "rule": "A navy polo and beige short look polished when both hems stay precise.",
+      "pieces": [
+        "AIRism cotton pique polo",
+        "chino shorts",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 119.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-uv-cardigan-travel",
+      "title": "UV cardigan travel",
+      "seasons": [
+        "spring",
+        "summer"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-uv-cardigan.jpg",
+      "rule": "Layer grey over white and finish with stone pants for a calm travel uniform.",
+      "pieces": [
+        "UV Protection Cardigan",
+        "AIRism T-shirt",
+        "relaxed ankle pants",
+        "sport sneakers"
+      ],
+      "basket": {
+        "amount": 179.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-indigo-work-jacket",
+      "title": "Indigo work jacket",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-work-jacket.jpg",
+      "rule": "Use an indigo jacket with ecru jeans and a fine navy stripe for controlled contrast.",
+      "pieces": [
+        "denim work jacket",
+        "striped crew-neck T-shirt",
+        "wide-fit jeans",
+        "retro sneakers"
+      ],
+      "basket": {
+        "amount": 189.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-milano-rib-jacket",
+      "title": "Milano rib jacket",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-milano-jacket.jpg",
+      "rule": "The structured knit replaces a blazer; keep the tee and Smart Pants exceptionally clean.",
+      "pieces": [
+        "washable Milano rib jacket",
+        "Supima cotton T-shirt",
+        "Smart Pants",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 209.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-balmacaan-merino-line",
+      "title": "Balmacaan merino line",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/uniqlo-balmacaan.jpg",
+      "rule": "A beige balmacaan over navy merino and charcoal trousers gives a long quiet column.",
+      "pieces": [
+        "Balmacaan Coat",
+        "Merino Sweater",
+        "Smart Pants",
+        "ankle boots"
+      ],
+      "basket": {
+        "amount": 329.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-fleece-utility-weekend",
+      "title": "Fleece utility weekend",
+      "seasons": [
+        "fall",
+        "winter"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-fleece-utility.jpg",
+      "rule": "Keep the fleece cream and the utility trouser olive; the shoe should stay grey.",
+      "pieces": [
+        "fleece full-zip jacket",
+        "wide cargo pants",
+        "sport sneakers"
+      ],
+      "basket": {
+        "amount": 159.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-flannel-chino-trail",
+      "title": "Flannel + chino trail",
+      "seasons": [
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-flannel-chino.jpg",
+      "rule": "Wear the green flannel open over white and choose a straight tan chino.",
+      "pieces": [
+        "flannel shirt",
+        "slim-fit chino pants",
+        "weather-ready boots"
+      ],
+      "basket": {
+        "amount": 159.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-premium-linen-short-set",
+      "title": "Premium linen short set",
+      "seasons": [
+        "summer"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-linen-shorts.jpg",
+      "rule": "White linen and stone shorts need only a low tan shoe to feel finished.",
+      "pieces": [
+        "premium linen shirt",
+        "linen-blend shorts",
+        "espadrille-style shoes"
+      ],
+      "basket": {
+        "amount": 129.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-dry-parachute-tonal",
+      "title": "DRY parachute tonal",
+      "seasons": [
+        "summer",
+        "fall"
+      ],
+      "categories": [
+        "casual"
+      ],
+      "image": "assets/uniqlo-dry-parachute.jpg",
+      "rule": "Keep the technical shapes dark and use different grey values for depth.",
+      "pieces": [
+        "DRY crew-neck T-shirt",
+        "parachute pants",
+        "sport sneakers"
+      ],
+      "basket": {
+        "amount": 129.7,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-navy-jersey-tailoring",
+      "title": "Navy jersey tailoring",
+      "seasons": [
+        "spring",
+        "fall"
+      ],
+      "categories": [
+        "old-money",
+        "casual"
+      ],
+      "image": "assets/uniqlo-navy-jacket.jpg",
+      "rule": "A striped shirt makes the navy jacket and beige pleat feel less corporate.",
+      "pieces": [
+        "jersey tailored jacket",
+        "striped broadcloth shirt",
+        "Pleated Wide Pants",
+        "minimal sneakers"
+      ],
+      "basket": {
+        "amount": 229.6,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "uniqlo-camel-short-coat-winter",
+      "title": "Camel short-coat winter",
+      "seasons": [
+        "winter"
+      ],
+      "categories": [
+        "old-money"
+      ],
+      "image": "assets/uniqlo-camel-coat.jpg",
+      "rule": "Keep the coat at mid-thigh and the knit cream to protect a clean 175 cm proportion.",
+      "pieces": [
+        "wool-blend short coat",
+        "Merino Sweater",
+        "Smart Pants",
+        "ankle boots"
+      ],
+      "basket": {
+        "amount": 309.6,
+        "currency": "USD"
+      }
+    }
+  ],
+  "products": [
+    {
+      "id": "u-jacket",
+      "slot": "outerwear",
+      "name": "Comfort jacket",
+      "image": "assets/item-navy-blazer.jpg",
+      "worn": "assets/tryon-uniqlo.png",
+      "price": {
+        "amount": 79.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/men/outerwear-and-blazers",
+      "note": "Lightweight structure for a clean everyday line.",
+      "availability": "listed"
+    },
+    {
+      "id": "u-knit",
+      "slot": "top",
+      "name": "Washable Milano ribbed skipper polo sweater",
+      "image": "assets/item-cream-polo.jpg",
+      "worn": "assets/tryon-uniqlo.png",
+      "price": {
+        "amount": 49.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/products/E482325-000/00?colorDisplayCode=31",
+      "note": "Verified beige option; crisp Milano rib knit with an open skipper collar.",
+      "availability": "listed",
+      "facts": {
+        "colour": "31 BEIGE",
+        "material": "42% cotton, 30% polyester, 28% rayon",
+        "pattern": "Milano rib knit",
+        "construction": "Skipper collar; comfortably fitted",
+        "native_price": "$49.90",
+        "evidence": "Official UNIQLO product page · product ID 487157"
+      },
+      "verified": {
+        "price": 49.9,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_product_page",
+        "source_url": "https://www.uniqlo.com/us/en/products/E482325-000/00?colorDisplayCode=31",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    },
+    {
+      "id": "u-green-polo",
+      "slot": "top",
+      "name": "Forest fine-knit polo",
+      "image": "assets/item-green-polo.png",
+      "worn": "assets/inspo-green-polo.png",
+      "price": {
+        "amount": 49.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/men/tops/polo-shirts",
+      "note": "The deep forest colour works cleanly with stone tailoring and dark brown leather.",
+      "availability": "listed",
+      "facts": {
+        "colour": "Forest green user reference",
+        "material": "Fine knit",
+        "pattern": "Solid",
+        "construction": "Short sleeve; three-button placket",
+        "native_price": "$49.90 reference",
+        "evidence": "Official category route; exact live colour pending"
+      }
+    },
+    {
+      "id": "u-pleats",
+      "slot": "bottom",
+      "name": "Pleated relaxed wide pants",
+      "image": "assets/item-brown-trouser.jpg",
+      "worn": "assets/tryon-uniqlo.png",
+      "price": {
+        "amount": 59.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/products/E487220-000/00?colorDisplayCode=38",
+      "note": "Verified dark-brown option with a single tuck, stretch and a softly tapered wide silhouette.",
+      "availability": "listed",
+      "facts": {
+        "colour": "38 DARK BROWN",
+        "material": "67% polyester, 29% rayon, 4% spandex",
+        "pattern": "Solid",
+        "construction": "Single tuck; wide tapered barrel silhouette; two-way stretch",
+        "native_price": "$59.90",
+        "evidence": "Official UNIQLO product page · product IDs 489560 / 487220"
+      },
+      "verified": {
+        "price": 59.9,
+        "currency": "USD",
+        "availability": "listed",
+        "source_kind": "official_product_page",
+        "source_url": "https://www.uniqlo.com/us/en/products/E487220-000/00?colorDisplayCode=38",
+        "verified_at": "2026-09-21T00:00:00+04:00"
+      }
+    },
+    {
+      "id": "u-sneaker",
+      "slot": "shoes",
+      "name": "Clean court sneakers",
+      "image": "assets/item-white-sneaker.jpg",
+      "worn": "assets/tryon-uniqlo.png",
+      "price": {
+        "amount": 59.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/men/accessories/shoes",
+      "note": "A versatile light finish for denim, chinos and pleated trousers.",
+      "availability": "listed"
+    },
+    {
+      "id": "u-glasses",
+      "slot": "accessory",
+      "name": "Round sunglasses",
+      "image": "assets/item-tortoise-sunglasses.jpg",
+      "worn": "assets/tryon-uniqlo.png",
+      "price": {
+        "amount": 24.9,
+        "currency": "USD"
+      },
+      "url": "https://www.uniqlo.com/us/en/men/accessories",
+      "note": "Tortoiseshell adds quiet contrast to navy and cream.",
+      "availability": "listed",
+      "clip": "inset(5% 36% 83%)"
+    }
+  ]
+}
