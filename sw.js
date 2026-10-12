@@ -2,7 +2,7 @@
 // visitor has seen stored on the device, so returning visits never re-download
 // what is already there. The version line below is rewritten by
 // scripts/catalogue-pipeline.mjs whenever catalogue content changes.
-const CACHE_VERSION='fil-967dac1f760d2f41';
+const CACHE_VERSION='fil-a5088987c6876ccd';
 const SHELL_CACHE=`${CACHE_VERSION}-shell`;
 const DATA_CACHE='fil-data';
 const ASSET_CACHE='fil-assets-v1';
