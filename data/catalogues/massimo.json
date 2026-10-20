@@ -16,7 +16,7 @@
     "#293548"
   ],
   "try_on_model": "tryon-massimo.png",
-  "updated_at": "2026-10-20T11:38:17.523Z",
+  "updated_at": "2026-10-20T17:08:07.943Z",
   "seasonal": [
     {
       "id": "massimo-spring",
@@ -634,9 +634,9 @@
         "evidence": "Official category route; exact live item pending"
       },
       "link_check": {
-        "state": "unverified",
-        "status": 0,
-        "checked_at": "2026-10-20T04:52:10.329Z"
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-10-20T17:08:00.085Z"
       }
     },
     {
@@ -653,9 +653,9 @@
       "note": "Cream knit adds texture without breaking a tonal palette.",
       "availability": "listed",
       "link_check": {
-        "state": "ok",
-        "status": 200,
-        "checked_at": "2026-10-20T11:38:11.169Z"
+        "state": "unverified",
+        "status": 0,
+        "checked_at": "2026-10-20T17:08:07.836Z"
       }
     },
     {
