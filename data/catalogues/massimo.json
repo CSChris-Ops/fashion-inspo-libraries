@@ -16,7 +16,7 @@
     "#293548"
   ],
   "try_on_model": "tryon-massimo.png",
-  "updated_at": "2026-10-20T04:52:10.345Z",
+  "updated_at": "2026-10-20T11:38:17.523Z",
   "seasonal": [
     {
       "id": "massimo-spring",
@@ -651,11 +651,11 @@
       },
       "url": "https://www.massimodutti.com/am/en/men/polos-n1439",
       "note": "Cream knit adds texture without breaking a tonal palette.",
-      "availability": "unavailable",
+      "availability": "listed",
       "link_check": {
-        "state": "dead",
-        "status": 404,
-        "checked_at": "2026-10-20T04:52:02.829Z"
+        "state": "ok",
+        "status": 200,
+        "checked_at": "2026-10-20T11:38:11.169Z"
       }
     },
     {
