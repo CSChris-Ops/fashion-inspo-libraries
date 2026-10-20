@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "content_hash": "a59751ad5d10d724",
-  "generated_at": "2026-10-16T16:40:17.804Z",
+  "content_hash": "0605470b23d4be31",
+  "generated_at": "2026-10-20T04:52:10.345Z",
   "sync": {
     "poll_seconds": 300
   },
@@ -22,8 +22,8 @@
       "id": "massimo",
       "label": "Massimo Dutti",
       "path": "data/catalogues/massimo.json",
-      "hash": "bf6827e4a9452c83",
-      "updated_at": "2026-10-12T15:27:18.646Z",
+      "hash": "8d42e01f73887cb9",
+      "updated_at": "2026-10-20T04:52:10.345Z",
       "counts": {
         "seasonal": 4,
         "formulas": 18,
@@ -61,7 +61,7 @@
   },
   "wardrobe": {
     "path": "data/wardrobe.json",
-    "hash": "1ef5c87e96b4051a",
+    "hash": "73d34f34d94fb96f",
     "pieces": 282
   },
   "assets": [
