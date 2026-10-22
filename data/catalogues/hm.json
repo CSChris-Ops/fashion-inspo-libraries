@@ -16,7 +16,7 @@
     "#3f4c3e"
   ],
   "try_on_model": "tryon-hm.png",
-  "updated_at": "2026-10-16T16:40:17.804Z",
+  "updated_at": "2026-10-22T21:36:39.658Z",
   "seasonal": [
     {
       "id": "hm-spring",
@@ -867,9 +867,9 @@
       "note": "A simple black boot keeps winter layers visually grounded.",
       "availability": "listed",
       "link_check": {
-        "state": "ok",
-        "status": 200,
-        "checked_at": "2026-09-24T11:47:06.788Z"
+        "state": "unverified",
+        "status": 500,
+        "checked_at": "2026-10-22T21:36:36.815Z"
       }
     },
     {
