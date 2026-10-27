@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
-  "content_hash": "35450158be2199d0",
-  "generated_at": "2026-10-27T05:06:25.889Z",
+  "content_hash": "bc3aaa7517c8cd75",
+  "generated_at": "2026-10-27T12:13:00.132Z",
   "sync": {
     "poll_seconds": 300
   },
@@ -10,8 +10,8 @@
       "id": "hm",
       "label": "H&M",
       "path": "data/catalogues/hm.json",
-      "hash": "301942c67ce4484c",
-      "updated_at": "2026-10-27T05:06:25.889Z",
+      "hash": "f12dc5da5f0bc1fe",
+      "updated_at": "2026-10-27T12:13:00.132Z",
       "counts": {
         "seasonal": 4,
         "formulas": 24,
@@ -61,7 +61,7 @@
   },
   "wardrobe": {
     "path": "data/wardrobe.json",
-    "hash": "647d1a936b80574b",
+    "hash": "95840af34e200483",
     "pieces": 282
   },
   "assets": [
