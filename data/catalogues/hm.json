@@ -16,7 +16,7 @@
     "#3f4c3e"
   ],
   "try_on_model": "tryon-hm.png",
-  "updated_at": "2026-10-25T04:42:34.614Z",
+  "updated_at": "2026-10-27T05:06:25.889Z",
   "seasonal": [
     {
       "id": "hm-spring",
@@ -813,9 +813,9 @@
         "verified_at": "2026-09-21T00:00:00+04:00"
       },
       "link_check": {
-        "state": "ok",
-        "status": 200,
-        "checked_at": "2026-10-16T16:40:13.895Z"
+        "state": "unverified",
+        "status": 500,
+        "checked_at": "2026-10-27T05:06:21.315Z"
       }
     },
     {
